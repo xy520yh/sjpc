@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内容页</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/swiper.min.css" type="text/css" media="screen">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/content.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+  <div class="list_wrap">
+    <div class="header_common">
+        <div class="header_left"> 
+          <div class="header_logo"><a href="#" target="_blank"><img src="images/common_logo.png" alt="" /></a></div>
+          <div class="header_nav">
+            <a href="index.html">HOME</a><a href="list.html" class="active">NEWS</a>
+            <a href="index.html#slide03">CHARACTERS</a>
+            <a href="index.html#slide04">FLOWER FAIRIES</a>
+            <a href="index.html#slide05">SHOTS</a>
+            <a href="index.html#slide06">FEATURES</a><a href="#">LANGUAGE</a>
+                                                                            
+          </div>
+        </div>
+        <div class="header_right">
+          <a class="common_ico_follow" href="#"><img src="images/common_ico_follow.png" alt=""/></a>
+          <a class="common_ico_fb" href="#"><img src="images/common_ico_fb.png" alt=""/></a>
+          <a class="common_ico_game" href="#"><img src="images/common_ico_game.png" alt=""/></a>
+        </div>
+    </div>
+    <div class="content_wrapper">
+        <h1 class="title">MAJOR UP DATE</h1>
+        <h2 class="sub-title">2022.05.22</h2>
+            <div class="content">
+                <div class="content_top"><img src="images/content_top_bg.png"></div>
+                <div class="content_center">
+                    <h2>New [Blessing System]</h2>
+                    <p> 1. Charge Holy Tree to obtain [Blessing Fruit] of various qualities and [Blessing Coins]. Fruit of different qualities has a greater chance to be grown into [Blessing Crystals] of the matching quality;</p>
+                    <p>2. [Energy Essence] can be obtained from Windhunt Quest, Treasure Map, Deals Shop, which can be used for charging the Holy Tree.</p>
+                    <p>3. [Blessing Coins] can be used to redeem rewards in the Blessing Shop;</p>
+                    <p>4. Crystal and Coppers which used to upgrade equipment, Sacred Windbell, Reroll Dew, and Prophet Crystal can be used for charging the Holy Tree;</p>
+                    <p>5. [Blessing Coins] can be used to redeem rewards in the Blessing Shop.</p>
+                    <h2 class="mr_t"> New [Elemental Sprite]</h2>
+                    <p>1. Complete tutorial quests regarding Elemental Sprites to obtain them! Elemental Sprites grant your character Elemental Stats;</p>
+
+                </div>
+                
+        </div>
+    </div>
+  </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/devicerem.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type='text/javascript'  src="js/qiehuan.js"></script>
+<script>
+    //商店图轮播
+    var swiper = new Swiper('.img_swiper', {
+            loop : true,
+            
+            pagination: {
+                clickable: true,
+                el: '.img_swiper .swiper-pagination',
+            },
+    });
+ </script>
+</body>
+</html>

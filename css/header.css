@@ -1,0 +1,18 @@
+/* 头部 */
+*{margin:0;padding:0;box-sizing:border-box;}
+.header_common{height:0.94rem;position:fixed;left:1rem;right:0.7rem;top:0;z-index:10;display:flex;justify-content:space-between;}
+.header_left{display:flex;}
+.header_logo{width:1.75rem;height:0.91rem;}
+.header_logo img{width:1.75rem;height:0.91rem;}
+.header_nav{display:flex;height:100%;align-items:center;letter-spacing:5px;position:relative;}
+.header_nav a{padding:0 30px;font-size:0.16rem;font-family:'Trebuchet MS','Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial,sans-serif;letter-spacing:0rem;color:#fff;
+}
+.header_nav a.active,.header_nav a:hover{    text-shadow: 0 0 0.05rem #0d5aed, 0 0 0.1rem #0d5aed, 0 0 0.15rem #0d5aed, 0 0 0.2rem #0d5aed, 0 0 0.35rem #0d5aed, 0 0 0.4rem #0d5aed, 0 0 0.5rem #0d5aed;
+   
+    color: #fff;
+}
+.header_right{display:flex;height:100%;width:2rem;}
+.header_right a{display:flex;align-items:center;justify-content:center;}
+.header_right .common_ico_follow img{width:auto;height:0.36rem;margin-right:0.16rem;}
+.header_right .common_ico_fb img{width:auto;height:0.36rem;margin-right:0.06rem;}
+

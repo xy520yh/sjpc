@@ -1,0 +1,20 @@
+
+/* 通用*/
+*{margin:0;padding:0;box-sizing: border-box;}
+*{word-wrap: break-word;-webkit-hyphens: auto;-moz-hyphens: auto;-ms-hyphens: auto; hyphens: auto;}/*英文过长换行并添加连接符*/
+html {-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%; text-size-adjust: 100%;font-size:80px;} /*避免字体大小被重置*/
+::before,::after{   box-sizing: border-box;margin: 0;padding: 0;  -webkit-tap-highlight-color: rgba(0,0,0,0);}
+a{color:inherit; text-decoration: none;}
+
+html,body{background-color:black;background-image:url(../images/list_bg.jpg);background-size:cover;font-weight:100;height:auto;width:100%;max-width:unset;min-width:1000px;min-height:100vh;margin:0 auto;background-repeat:no-repeat;background-attachment:fixed;}
+.content_wrapper{min-height:calc(100vh - 1.85rem);width:12rem;margin:0 auto 0;padding-top:1.5rem;}
+.content_wrapper .title{color:#fff;font-size:0.48rem;text-align:center;text-transform:uppercase !important;font-family:'Times New Roman',Times,serif;margin:0 auto;
+  text-shadow: 3px 3px 10px #092c66;
+}
+.content_wrapper .sub-title{text-align:center;font-size:0.18rem;  text-shadow: 3px 3px 10px #092c66;font-family:'Times New Roman',Times,serif;color:#fff;}
+.content{margin:20px auto;width:12.04rem;font-size:21px;color:#b2b2af;border:2px solid #79c4f8;min-height:calc(100vh - 500px);word-break:break-word;word-wrap:break-word;text-align:justify;}
+.content_top img{width:12rem;height:0.66rem;display: block;}
+.content_center{width:12rem;background:url(../images/content_center_bg.png) repeat-y;padding:0rem 0.7rem 0.4rem;font-family:Arial, Helvetica, sans-serif;}
+.content_center h2{color:#fce23a;font-size:0.24rem; margin-bottom: 0.2rem;}
+.content_center p{color:#fff;font-size:0.18rem;line-height:0.5rem;}
+.mr_t{margin-top: 0.2rem;}
