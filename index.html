@@ -1,314 +1,734 @@
-<!DOCTYPE html>    
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="keywords" content=""/>
-<meta name="description" content="">
-<title></title>
-<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
-<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
-<link rel="stylesheet" type="text/css" href="css/index.css" />
-
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="css/header.css"     rel="stylesheet">
+    <link href="css/animate.css"     rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet" >
+    <link href="css/index.css"      rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+</head>   
 <body>
-	<div class="tc_succes" >    
-		<div class="closed"><img src="images/close.png" alt=""></div>
-		<div class="tc_dhm">
-			<P class="big">恭喜您预约成功！</P>
-			<p class="zong">（请牢记此账号，该账号仅用于奖品发放使用）</p>
+
+<!--蒙层--> 
+<div class="masked" id="masked"></div>
+
+<!--the world--> 
+<div id="myModal" class="modal">
+ 
+  <div class="modal-content">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="mySlides">
+     
+      <img src="images/part5_img1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+     
+      <img src="images/part5_img2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+     
+      <img src="images/part5_img3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+     
+      <img src="images/part5_img4.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      
+      <img src="images/part5_img5.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+     
+      <img src="images/part5_img6.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+     
+      <img src="images/part5_img7.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+     
+      <img src="images/part5_img8.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+     
+      <img src="images/part5_img9.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      
+      <img src="images/part5_img10.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      
+      <img src="images/part5_img11.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+   
+  </div>
+</div>
+<!--公共头部-->
+<div class="header">
+  <div class="header_common">
+    <div class="header_left"> 
+      <div class="header_logo"><a href="#" target="_blank"><img src="images/common_logo.png" alt="" /></a></div>
+      <div class="header_nav">
+        <a href="#" class="active">HOME</a><a href="list.html">NEWS</a><a href="#" class="characters">CHARACTERS</a><a href="#" class="flower">FLOWER FAIRIES</a>
+        <a href="#" class="shots">SHOTS</a><a href="#" class="features">FEATURES</a>                                                 
+      </div>
+    </div>
+    <div class="header_right">
+      <a class="common_ico_follow" href="#"><img src="images/common_ico_follow.png" alt=""/></a>
+      <a class="common_ico_fb" href="https://www.facebook.com/LONGLOBAL" target="_blank"><img src="images/common_ico_fb.png" alt=""/></a>
+      <a class="common_ico_game" href="https://discord.gg/TBFDKsqUbB" target="_blank"><img src="images/common_ico_game.png" alt=""/></a>
+    </div>
+  </div>
+</div>
+<!--主体内容-->
+<div class="swiper-container swiper-fullscreen">
+  <div class="swiper-wrapper">
+    <!--part1-->
+    <div class="swiper-slide slide1 swiper-no-swiping" data-hash="slide01">
+        <div class="page01_bg page">
+          <video src="media/index_bg.mp4" class="bg-video" muted="" loop="loop" autoplay="autoplay"></video>
+          <div class="container">
+            <div class="part1_ico">
+              <a href="https://longlobal.onelink.me/e7jh/tbodpc51" target="_blank"><img src="images/part1_ios_ico.png"></a>
+              <a href="https://longlobal.onelink.me/e7jh/tbodpc51" target="_blank"><img src="images/part1_gg_ico.png"></a>
+            </div>
+          </div>
         </div>
-	</div>
-	<div class="masked"></div>
-	<!--顶部 --> 
-	<div class="header"  id="section1">
-		<div class="qq_box"><a href="https://jq.qq.com/?_wv=1027&k=frAXjWoQ">官方QQ群</a></P></div>
-		<div class="menu" onclick="openNav()">
-			<img src="images/pc_ico_03.png">
-		</div>
-		<div id="mySidenav" class="sidenav">
-			<span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
-			<a href="#" class="nav_04">游戏特色</a>
-			<a href="#" class="nav_05">角  色</a>
-			<a href="#" class="nav_06">花 灵</a>
-			<a href="#" class="nav_07">特 色</a>
-		  </div>
-		<!-- <div class="fb_ico">
-			<a href="#"><img src="images/pc_ico_05.png"></a>
-			<a href="#"><img src="images/pc_ico_07.png"></a>
-		</div>
-		<div class="link_ico">
-			<a href="#"><img src="images/pc_ico_09.png"></a>
-		
-		</div>
-		<div class="select_box select_box1 ">
-            <input id="btn2" type="text" value="CN" readonly="readonly">
-            <ul class="select_ul" id="select2">
-				<li><a href="en/en.html">English</a></li>
-				<li><a href="id/id.html">Indonesia</a></li>
-				<li class="on"><a href="cn/cn.html">简体中文</a></li>
-				<li><a href="vn/vn.html">ViệtNam</a></li>
-				<li><a href="th/th.html">ภาษาไทย</a></li>
-			</ul>
-		</div> -->
-	</div>	
-	<!--第一屏幕 --> 
-	<div class="page1" id="page1">
-		
-		<div class="logo animated  fadeInDown"><img src="images/phone_logo.png"></div>
-		<div class="solgen"><img src="images/cn/cn_title.png"></div>
-		<!-- <div class="gg_ico">
-			<div class="ico">
-				<a href="#"><img src="images/phone_app_ico.png"></a>
-				<a href="#"><img src="images/phone_gg_ico.png"></a>
-			</div>
-		</div> -->
-	</div>
-	<!--第二屏幕 --> 
-	<div class="page2">
-		<div class="login_box">
-			<div class="select_app">
-				<span class="select_02">
-					<select name="" class="select_list">
-						<option>Android</option>
-						<option>Ios</option>
-					
-					</select>
-				</span>
-			</div>
-			<div class="input1" >
-				<P ><input name="" type="text"  class="text_content1" value='123456789123'/></P>
-			</div>
-	
-			<div class="sure_btn sure_btn_cn"><a href="javascript:void(0)" ><img src="images/cn/cn_sure.png"></a>
-				<div  style="display: none;"><p>您的兑换码为：</p> <p>这是一段放码的地方</p></div>
-			</div> 
-			<div class="yy_btn_cn"><a  class ="send" href="javascript:void(0)"><img src="images/cn/cn_yy_btn.png"></a></div> 
-		</div>		
+    </div>
+    <!--part2-->
+    <div class="swiper-slide slide2 swiper-no-swiping" data-hash="slide02"> 
+      <div class="page02_bg">
+          <div class="mainShow1">
+             
+              <div class="dc_bg">
+                <img src="images/part2_dc_bg.png" class="dc_bg_img">
+                <div class="dc dc_10_hover"><img src="images/part2_dc.png"></div>
+                <div class="dc dc_20_hover"><img src="images/part2_dc.png"></div>
+                <div class="dc dc_40_hover"><img src="images/part2_dc.png"></div>
+                <div class="dc dc_70_hover"><img src="images/part2_dc.png"></div>
+                <div class="dc dc_100_hover"><img src="images/part2_dc.png"></div> 
+                <!-- <div class="dc dc_200_hover"><img src="images/part2_dc.png"></div>  -->
+                <div  class="part2_regitster"><a href="https://longlobal.onelink.me/e7jh/tbodpc51" target="_blank"><img src="images/part2_regitser.png"></a></div>
+              </div>
+             
+              
+              <div class="part2_ico">
+                <a href="https://longlobal.onelink.me/e7jh/tbodpc51" target="_blank"><img src="images/part2_ico_ios.png" class="part2_store_ios"></a>
+                <a href="https://longlobal.onelink.me/e7jh/tbodpc51" target="_blank"><img src="images/part2_ico_gg.png" class="part2_store_gg"></a>
+              </div>
+            </div>     
+      </div>  
+  </div>
+    <!--part3-->
+    <div class="swiper-slide slide3"  data-hash="slide03"> 
+        <div class="page03_bg">
+            <div class="mainShow2">
+                    <div class="game_roles">
+                        <div class="swiper-container roles_wrap">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide1">
+                                  <div class="role_jineng role_jineng4">
+                                    <h2>Craftsman</h2>
+                                  </div>
+                                  <div class="role_info role_info1">
+                                    <P>Craftsmen integrate the principles of alchemy into guns, stimulate the four elemental attributes, and pour out firepower in an instant to wipe out their enemies.</P>
+                                  </div>
+                                  <div class="role_img1 role_img"></div>
+                                </div>
+                                <div class="swiper-slide slide2">
+                                  <div class="role_jineng role_jineng1">
+                                    <h2>Gladiator</h2>
+                                  </div>
+                                  <div class="role_info role_info2">
+                                    <P>Gladiators use the katana as their weapon and are good at close combat, showing amazing strength whirling a sharp blade!</P>
+                                  </div>
+                                  <div class="role_img2 role_img"></div>
+                                </div>
+                                <div class="swiper-slide slide3">
+                                  <div class="role_jineng role_jineng2">
+                                    <h2>Ranger</h2>
+                                  </div>
+                                  <div class="role_info role_info3">
+                                    <P>Rangers have unparalleled mobility and agility, they find the weakness of the enemy and move to kill in one shot!</P>
+                                  </div>
+                                  <div class="role_img3 role_img"></div>
+                                </div>
+                                <div class="swiper-slide slide4">
+                                  <div class="role_jineng role_jineng3">
+                                    <h2>Scholar</h2>
+                                  </div>
+                                  <div class="role_info role_info4">
+                                    <P>The magic book held in the hand contains many mysteries, allowing them to deal great damage. They are good at defeating enemies with spells from a distance.</P>
+                                  </div>
+                                  <div class="role_img4 role_img"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dock_list">
+                        <ul class="swiper_dock_list">
+                            <li > 
+                              <a href="javascript:void(0)"><img class="icon" src="images/part3_small_hover_01.png"/></a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)"><img class="icon on" src="images/part3_small_hover_01.png"/></a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)"><img class="icon" src="images/part3_small_hover_01.png"/></a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)"><img class="icon" src="images/part3_small_hover_01.png"/></a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>   
+              </div>
+        </div>  
+    </div>
+    <!--part4-->
+    <div class="swiper-slide slide4" data-hash="slide04"> 
+        <div class="part4_fw"></div> 
+        <div class="page04_bg">
+          <div class="mainShow1">
+          <div class="role">
+            <div class="list">
+              <div class="swiper-container part4_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/part4_mzsh_small.png" /></div>
+                  <div class="swiper-slide"><img src="images/part4_sly_small.png" /></div>
+                  <div class="swiper-slide"><img src="images/part4_jg_small.png" /></div>
+                  <div class="swiper-slide"><img src="images/part4_zyh_small.png" /></div>
+                  <div class="swiper-slide"><img src="images/part4_sl_small.png" /></div>
+                  <div class="swiper-slide"><img src="images/part4_sc_small.png" /></div>
+                  <div class="swiper-slide"><img src="images/part4_ct_small.png" /></div>
+                  <div class="swiper-slide"><img src="images/part4_bdl_small.png" /></div>
+                  <div class="swiper-slide"><img src="images/part4_jzh_small.png" /></div>
+                  <div class="swiper-slide"><img src="images/part4_yjc_small.png" /></div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <dl class="content">
+                <!--曼珠沙华-->
+              <dd>
+                <img src="images/part4_mzsh.png" class="role_people"/>
+                <div class="role_name">Lycoris</div> 
+                <div class="note">
+                  <div class="scroll">
+                    <h3>Extreme Love</h3>
+                    <h4><span>Floriography</span></h4>
+                    <p>The flowers that grow in the dark and shady environment have the hottest colors\nWith full of enthusiasm, she will always keep a extremely strong emotion to the host.</p>
+                    <p> She looks very mature and calm but on the contrary she is a woman who is always for love</p>
+                    <p> If some one is cheating on her, he might not be able to see the sun of the next day. </p>
+                  </div>
+                </div>
+              </dd>
+                <!-- 十六夜-->
+                <dd>
+                  <img src="images/part4_sly.png" class="role_people"/>
+                  <div class="role_name">Chestnut<br/>Rose</div> 
+                  <div class="note">
+                    <div class="scroll">
+                      <h3>Defect</h3>
+                      <h4><span>Floriography</span></h4>
+                      <p>She turned off her emotion switch right after [that incident].</p>
+                      <p> She is a girl living for revenge, hiding herself in the shadow of hatred and concealing all her emotions behind her armor. Her biggest wish is to eradicate humans.</p>
+                      <p> Just like the defected Chestnut Rose, she is illiberally obsessed with the beauty of defects.</p>
+                      <p> Human beings with defects in particular.</p>
+                    </div>
+                  </div>
+                </dd>
+                <!--桔梗-->
+                <dd>
+                  <img src="images/part4_jg.png" class="role_people"/>
+                  <div class="role_name">Balloon<br/>Flower</div> 
+                  <div class="note">
+                    <div class="scroll">
+                      <h3>Hopeless Love</h3>
+                      <h4>Floriography</h4>
+                      <p>Balloon Flower is trustworthy, lively, and never hesitant.</p>
+                      <p>She is introverted and despises sharing or anything.</p>
+                      <p>In most cases, she puts loyalty in front of justice and would do bad things just to follow some orders.</p>
+                      <p>Her sense of [right or wrong] was lost the first time she got into a battle.</p>
+                    </div>
+                  </div>
+                </dd>
+              <!--紫阳花-->
+              <dd>
+                <img src="images/part4_zyh.png" class="role_people"/>
+                <div class="role_name">Hydrangea</div> 
+                <div class="note">
+                  <div class="scroll">
+                    <h3>Unpredictable</h3>
+                    <h4>Floriography</h4>
+                    <p>Her innocent look fits her innocent personality. She is very sweet and amiable.</p>
+                    <p>Hydrangea is very curious and loves to pull pranks. Behind her petite and innocent appearance hides an explosion expert (who often fails her mission though).</p>
+                    <p>Even when something sad happens, she will still face it with humor and she </p>
+                  </div>
+                </div>
+              </dd>
+                <!--睡莲-->
+              <dd>
+                <img src="images/part4_sl.png" class="role_people"/>
+                <div class="role_name">Nymphaea</div> 
+                <div class="note">
+                  <div class="scroll">
+                    <h3>Innocence</h3>
+                    <h4>Floriography</h4>
+                    <p>She stays in water most of the time and she will feel suffocated after leaving the water for loo long.</p>
+                    <p>She seldom meets strangers and knows little about human society and their emotions. She is a slow responser and always strikes with an innocent look.</p>
+                    <p>If you talk with her long enough, you will find that some of her ideas are quite bewildering.\nIt's unclear what is the root cause of her personality, the environment or the low IQ she was born with.</p>
+                  </div>
+                </div>
+              </dd>
+               <!--山茶-->
+              <dd>
+                <img src="images/part4_sc.png" class="role_people"/>
+                <div class="role_name">Camellia</div> 
+                <div class="note">
+                  <div class="scroll">
+                    <h3>Modest</h3>
+                    <h4>Floriography</h4>
+                    <p>Camellia looks elegant and respectable just by standing there.</p>
+                    <p> Her noble and moderate manners show her to be a well educated lady.</p>
+                    <p>Many people are easily fooled by her appearance, thinking she must be too spoiled to get along with commoners. This upsets her quite a lot.\nBut sometimes, her meticulous and rigid attitude do cause stress. </p>
+                  </div>
+                </div>
+              </dd>
+                <!--刺桐-->
+              <dd>
+                <img src="images/part4_ct.png" class="role_people"/>
+                <div class="role_name">Erythrina</div> 
+                <div class="note">
+                  <div class="scroll">
+                    <h3>Unyielding</h3>
+                    <h4>Floriography</h4>
+                    <p>She may be quiet, but her very presence draws people's respect.</p>
+                    <p>The mystery surrounding her comes from her unusual grasp of time. In the eyes of Tiger's Claw, the abstract of time becomes a [silky substance].</p>
+                    <p>She doesn't know how she got this power, probably because the Cabala ancients used to use her to count time.</p>
+                  </div>
+                </div>
+              </dd>
+                <!--并蒂莲-->
+              <dd>
+                <img src="images/part4_bdl.png" class="role_people"/>
+                <div class="role_name">Twin Lotus</div> 
+                <div class="note">
+                  <div class="scroll">
+                    <h3>Syngenesis</h3>
+                    <h4>Floriography</h4>
+                    <p>A rarely seen Twin Lotus in the form of two girls. The elder one is called Melodia, the younger one Accompania.</p>
+                    <p>Though they are twins, they have developed distinct personalities.</p>
+                    <p>One is gentle and quiet, while the other is chirpy and unruly.</p>
+                    <p>They always appear as witches, carrying their valued music instrument that [they will protect with their lives].</p>
+                  </div>
+                </div>
+              </dd>
+               <!--金盏花-->
+              <dd>
+                <img src="images/part4_jzh.png" class="role_people"/>
+                <div class="role_name">Marigold</div> 
+                <div class="note">
+                  <div class="scroll">
+                    <h3>Departure</h3>
+                    <h4>Floriography</h4>
+                    <p>She always carries a tint of sorrow on her face. You can see sadness lingering in her eyes.</p>
+                    <p>Marigold is pessimistic about everything. She also suffers from bad luck, it always rains when she goes out but the sun comes out as soon as she returned home.</p>
+                    <p>It's hard to say whether her pessimism has shaped her life or if her life has made her pessimistic.\n[Anyway, this is life] </p>
+                  </div>
+                </div>
+              </dd>
+                 <!--月见草-->
+              <dd>
+                <img src="images/part4_yjc.png" class="role_people"/>
+                <div class="role_name">Primrose</div> 
+                <div class="note">
+                  <div class="scroll">
+                    <h3>Uninhibited Heart</h3>
+                    <h4>Floriography</h4>
+                    <p>Quiet and distant, like the cirrocumulus cloud.
+                    <p>Primrose has a tender and thoughtful heart, but she is very hesitant in front of opportunities, and now she has totally given up on them.</p>
+                    <p>[You may take the opportunity, but you can't guarantee the result]</p>
+                    <p>[If I don't open the box, I won't get hurt from what's inside]</p>
+                    <p>Even if she met someone she really likes, she would still be hesitating and eventually resort to silence.</p>
+                  </div>
+                </div>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--part5-->
+    <div class="swiper-slide slide5" data-hash="slide05">
+      <div class="page05_bg">
+        <div class="main_world_bg">
+          <div class="main">
+            <div class="part5_title"><h3><span>THE WORLD</span></h3></div>
+            <div class="section section1">
+              <div class="swiper-container infoList scale swiper-container-horizontal">
+                <ul class="swiper-wrapper info-wrap">
+                  <li class="swiper-slide info_item swiper-slide-active">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="f"><img src="images/part5_img1.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(1)"></div>
+                  </li>
+                  <li class="swiper-slide info_item swiper-slide-next">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="qb_img"><img src="images/part5_img2.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(2)"></div>
+                  </li>
+                  <li class="swiper-slide info_item">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="qb_img"><img src="images/part5_img3.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(3)"></div>
+                  </li>
+                  <li class="swiper-slide info_item">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="qb_img"><img src="images/part5_img4.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(4)"></div>
+                  </li>
+                  <li class="swiper-slide info_item">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="qb_img"><img src="images/part5_img5.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(5)"></div>
+                  </li>
+                  <li class="swiper-slide info_item swiper-slide-active">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="qb_img"><img src="images/part5_img6.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(6)"></div>
+                  </li>
+                  <li class="swiper-slide info_item swiper-slide-next">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="qb_img"><img src="images/part5_img7.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(7)"></div>
+                  </li>
+                  <li class="swiper-slide info_item swiper-slide-next">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="qb_img"><img src="images/part5_img8.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(7)"></div>
+                  </li>
+                  <li class="swiper-slide info_item swiper-slide-next">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="qb_img"><img src="images/part5_img9.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(7)"></div>
+                  </li>
+                  <li class="swiper-slide info_item swiper-slide-next">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="qb_img"><img src="images/part5_img10.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(7)"></div>
+                  </li>
+                  <li class="swiper-slide info_item swiper-slide-next">
+                    <div class="point plt"></div>
+                    <div class="point plb"></div>
+                    <div class="point prt"></div>
+                    <div class="point prb"></div>
+                    <div class="qb_img"><img src="images/part5_img11.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(7)"></div>
+                  </li>
+            
+                </ul>
+                <div class="swiper-scrollbar info_bar"><div class="swiper-scrollbar-drag" style="width: 438.785px;"></div></div>
+                <div class="info_prev2 swiper-button-disabled"><img src="images/part5_next.png" alt="prev"></div>
+                <div class="info_next2"><img src="images/part5_prev.png" alt="prev"></div>
+              </div>
+              <div class="info_prev disabled"></div>
+              <div class="info_next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--part6-->
+    <div class="swiper-slide slide6" data-hash="slide06">
+        <div class="page06_bg">
+          <div class="mainShow1">
+            <div id="certify">
+              <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="images/part6_banner1.jpg" /><div class="hui_bg"></div></div>
+                      <div class="swiper-slide"><img src="images/part6_banner2.jpg" /><div class="hui_bg"></div></div>
+                      <div class="swiper-slide"><img src="images/part6_banner3.jpg" /><div class="hui_bg"></div></div>
+                      <div class="swiper-slide"><img src="images/part6_banner4.jpg" /><div class="hui_bg"></div></div>
+                      <div class="swiper-slide"><img src="images/part6_banner5.jpg" /><div class="hui_bg"></div></div>
+                  </div>
+                  
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>        
+        </div>
+     </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/devicerem.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/qiehuan.js"></script>
+<script>
+/*主体滚动js*/
 
 
-	</div>
-	<!--第三屏幕 --> 
-	<div class="page3">
-		<div class="da_cheng01"><img src="images/cn/cn_dc.png" ></div>
-        <div class="da_cheng02"><img src="images/cn/cn_dc.png" ></div>
-        <div class="da_cheng03"><img src="images/cn/cn_dc.png" ></div>
-        <div class="da_cheng04"><img src="images/cn/cn_dc.png" ></div>
-        <div class="da_cheng05"><img src="images/cn/cn_dc.png" ></div>  
-        
-	</div>
-	<!--第四屏幕 --> 
-	<div class="page4" id="section4">
-		<div class="cn_ts_title"><img src="images/cn/cn_title_03.png"></div>
-		
-		<div class="phone_banner">
-			<div class="swiper-container phone_swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="images/cn/phone_featuers_title01.png"><img src="images/phone_featuers_img01.jpg" class="imga"></div>
-					<div class="swiper-slide"><img src="images/cn/phone_featuers_title02.png"><img src="images/phone_featuers_img02.jpg" class="imga"></div>
-					<div class="swiper-slide"><img src="images/cn/phone_featuers_title03.png"><img src="images/phone_featuers_img03.jpg" class="imga"></div>
-				</div>
-			</div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-pagination swiper-feature"></div>
-		</div>
-	</div>
-	<!--第五屏幕 --> 
-	<div class="page5" id="section5">
-		<div class="cn_js_title"><img src="images/cn/cn_title_07.png"></div>
-		
-		<div class="main_center">
-			<div class="main_tro">  
-				<div class="swiper-container page5_tro_swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="images/cn/phone_role_big_01.png"></div>
-						<div class="swiper-slide"><img src="images/cn/phone_role_big_02.png"></div>
-						<div class="swiper-slide"><img src="images/cn/phone_role_big_03.png"></div>
-						<div class="swiper-slide"><img src="images/cn/phone_role_big_04.png"></div>
-					</div>
-				</div>
-				<div class="swiper-pagination page5_pagination"></div>
-			</div>
-		
-		</div>
-	</div>
-	<!--第六屏幕 --> 
-	<div class="page6" id="section6">
-		<div class="cn_hl_title"><img src="images/cn/cn_title_10.png"></div>
-		<div class="game_roles">
-			<div class="swiper-container roles_wrap">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide slide1 swiper-no-swiping">
-						<div class="role_jineng role_jineng1">
-							<img src="images/cn/cn_text_bing_ti_lian.png" />
-						</div>
-						<img src="images/bing_ti_lian_role.png" class="role_img1 role_img"/>
-					</div>
-					<div class="swiper-slide slide2 swiper-no-swiping">
-						<div class="role_jineng role_jineng2">
-							<img src="images/cn/cn_text_shan_cha.png" />
-						</div>
-						<img src="images/shan_cha_role.png" class="role_img2 role_img"/>
-					</div>
-					<div class="swiper-slide slide3 swiper-no-swiping">
-					
-						<div class="role_jineng role_jineng3">
-							<img src="images/cn/cn_text_bai_he.png" />
-						</div>
-						<img src="images/bai_he_role.png" class="role_img3 role_img"/>
-					</div>
-					<div class="swiper-slide slide4 swiper-no-swiping">
-					
-						<div class="role_jineng role_jineng4">
-							<img src="images/cn/cn_text_hua_zhu.png" />
-						</div>
-						<img src="images/hua_zhu_role.png" class="role_img4 role_img"/>
-					</div>
-					<div class="swiper-slide slide5 swiper-no-swiping">
-						
-						<div class="role_jineng role_jineng5">
-							<img src="images/cn/cn_text_jia_zhu_tao.png" />
-						</div>
-						<img src="images/jia_zhu_tao_role.png" class="role_img5 role_img"/>
-					</div>
-					<div class="swiper-slide slide6 swiper-no-swiping">
-						
-						<div class="role_jineng role_jineng6">	
-							<img src="images/cn/cn_text_shui_lian.png" />
-						</div>
-						<img src="images/shui_lian_role.png" class="role_img6 role_img"/>
-					</div>
-					<div class="swiper-slide slide7 swiper-no-swiping">
-						
-						<div class="role_jineng role_jineng7">
-							<img src="images/cn/cn_text_jie_geng.png" />
-						</div>
-						<img src="images/jie_geng_role.png" class="role_img7 role_img"/>
-					</div>
-					<div class="swiper-slide slide8 swiper-no-swiping">
-						
-						<div class="role_jineng role_jineng8">
-							<img src="images/cn/cn_text_yan_wei.png" /></div>
-						<img src="images/yuan_wei_role.png" class="role_img8 role_img"/>
-					</div>
-					<div class="swiper-slide slide9 swiper-no-swiping">
-						
-						<div class="role_jineng role_jineng9">
-							<img src="images/cn/cn_text_jian_lan.png" /></div>
-						<img src="images/jian_lan_role.png" class="role_img9 role_img"/>
-					</div>
-					<div class="swiper-slide slide10 swiper-no-swiping">
-						
-						<div class="role_jineng role_jineng10">	
-							<img src="images/cn/cn_text_yue_jian_cao.png" /></div>
-						<img src="images/yue_jian_cao_role.png" class="role_img10 role_img"/>
-					</div>
-					<div class="swiper-slide slide11 swiper-no-swiping">
-						
-						<div class="role_jineng role_jineng11">	
-							<img src="images/cn/cn_text_ling_lan.png" />
-						</div>
-						<img src="images/ling_lan_role.png" class="role_img11 role_img"/>
-					</div>
-					<div class="swiper-slide slide12 swiper-no-swiping">
-						
-						<div class="role_jineng role_jineng12">
-							<img src="images/cn/cn_text_zi_yang_hua.png" />
-						</div>
-						<img src="images/zi_yang_hua_role.png" class="role_img12 role_img"/>
-					</div>
-					<div class="swiper-slide slide13 swiper-no-swiping">
-						
-						<div class="role_jineng role_jineng13">	
-							<img src="images/cn/cn_text_shi_che_ju.png" />
-						</div>
-						<img src="images/shi_che_ju_role.png" class="role_img13 role_img"/>
-					</div>
-					<div class="swiper-slide slide14 swiper-no-swiping">
-						
-						<div class="role_jineng role_jineng14">
-							<img src="images/cn/cn_text_jin_zhan_hua.png" />
-						</div>
-						<img src="images/jin_zhan_hua_role.png" class="role_img14  role_img"/>
-					</div>
-					
-				</div>
-			</div>
-			<div class="dock_list">
-			<ul class="swiper_dock_list">
-				<li> 
-					<a href="javascript:void(0)"><img class="icon on " src="images/bing_ti_lian_role_small.jpg"/></a>
-				</li>
-				<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/shan_cha_role_small.jpg"/></a>
-				</li>
-				<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/bai_he_role_small.jpg"/></a>
-				</li>
-				<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/hua_zhu_role_small.jpg"/></a>
-				</li>
-					<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/jia_zhu_tao_role_small.jpg"/></a>
-				</li>
-				<li> 
-					<a href="javascript:void(0)"><img class="icon" src="images/shui_lian_role_small.jpg"/></a>
-				</li>
-				<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/jie_geng_role_small.jpg"/></a>
-				</li>
-				<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/yuan_wei_role_small.jpg"/></a>
-				</li>
-				<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/jian_lan_role_samll.jpg"/></a>
-				</li>
-					<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/yue_jian_cao_role_small.jpg"/></a>
-				</li>
-				<li> 
-					<a href="javascript:void(0)"><img class="icon" src="images/ling_lan_role_small.jpg"/></a>
-				</li>
-				<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/zi_yang_hua_role_small.jpg"/></a>
-				</li>
-				<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/shi_che_ju_role_small.jpg"/></a>
-				</li>
-				<li>
-					<a href="javascript:void(0)"><img class="icon" src="images/jin_zhan_hua_role_small.jpg"/></a>
-				</li>
-				
-	
-			</ul>
-		</div>
-		</div>
-	</div>
-	<!--第七屏幕 --> 
-	<div class="page7" id="section7">
-		<div class="cn_ts1_title"><img src="images/cn/cn_title_12.png"></div>
-		<div class="main_center">
-			<div class="swiper-container page7_swiper">
-				<div class="swiper-wrapper">
-				  <div class="swiper-slide"><img src="images/img_big_01.jpg" data-url="#"> </div>
-				  <div class="swiper-slide"><img src="images/img_big_02.jpg" data-url="#"> </div>
-				  <div class="swiper-slide"><img src="images/img_big_03.jpg" data-url="#"></div>
-				  <div class="swiper-slide"><img src="images/img_big_04.jpg" data-url="#"></div>
-				  <div class="swiper-slide"><img src="images/img_big_05.jpg" data-url="#"></div>
-				
-				</div>
-				<div class="swiper-pagination"></div>
-				<div class="swiper-button-next"></div>
-				<div class="swiper-button-prev"></div>
-			  </div>
-		</div>
-	</div>
-	<div id="top-back" style="display: block;"></div>
-<!--淡出-->
-<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-<script type="text/javascript" src="js/swiper.min.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+var swiper1 = new Swiper('.swiper-fullscreen', {
+  direction: 'vertical',
+  slidesPerView: 'auto',
+  mousewheel: true,
+  hashNavigation: true,
+});
 
+$('.characters').click(function(){
+    swiper1.slideTo(2);
+});
+
+$('.flower').click(function(){
+    swiper1.slideTo(3);
+});
+
+$('.shots').click(function(){
+    swiper1.slideTo(4);
+});
+
+$('.features').click(function(){
+    swiper1.slideTo(5);
+});
+/*part3--role*/
+var roleswiper = new Swiper('.roles_wrap', {
+    loop : true,
+    effect : 'fade',
+    initialSlide:1,
+    on:{
+      slideChangeTransitionStart:function(roleswiper){
+        var length = $(".game_roles .swiper_dock_list li").length;
+        $(".game_roles .swiper_dock_list li img").removeClass('on');
+        $(".game_roles .swiper_dock_list li img").eq((this.activeIndex-1)%length).addClass('on');
+      }
+    },
+   
+});
+$(".game_roles .swiper_dock_list li").click(function(){
+    var index = $(this).index()+1;
+    roleswiper.slideTo(index);
+    $(".game_roles .swiper_dock_list li img").removeClass('on');
+    $(".game_roles .swiper_dock_list li img").eq(index-1).addClass('on');
+});
+/*part4--hualingzong*/
+var list = new Swiper('.part4_swiper',{
+        loop:true, initialSlide: 6,
+        slideToClickedSlide: true,
+        slidesPerView: 4,
+        freeMode: true,watchSlidesProgress: true,
+        navigation: {
+          nextEl: '.role .list .swiper-button-next',
+          prevEl: '.role .list .swiper-button-prev',
+	},
+  on: {
+    resize: function () {
+            setTimeout(function(){
+              list.update()
+            },500)
+            
+      },
+    slideChangeTransitionEnd:function(swiper1){ 
+         var index = this.realIndex;
+           //role.slideTo(swiper1.realIndex);
+         $('.role .content dd').eq(index).fadeIn().siblings().hide();
+           var dd = $('.role .content dd').eq(index);
+         //  console.log(dd.length)
+              $('.role .content dd').hide()
+              dd.show();
+            //  dd.find('.role_name').addClass('animated fadeInDown');
+            //  dd.find('.role_people').addClass('animated fadeInUp');
+            //  dd.find('.note').addClass('animated fadeInRight');
+         },
+       },
+});
+ /*part5--theworld*/
+var mySwiper=new Swiper(".infoList",{
+  direction:"horizontal",
+  
+  wrapperClass:"info-wrap",
+  slideClass:"info_item",
+  slidesOffsetBefore : -100,
+  navigation: {
+    nextEl: ".info_next2",
+    prevEl: ".info_prev2",
+  },
+ 
+  scrollbar: {
+    el: ".info_bar",
+    // hide: true,
+    dragSize: 189,
+  },
+  scrollbarHide:!1,
+  scrollbarDraggable:!0,
+  simulateTouch:!1,
+  initialSlide:0,
+  slidesPerView:"auto",
+  mousewheelControl:!0,
+
+  speed:800,roundLengths:!0,
+  preventClicks:!1,onInit:function(){
+      $(".info_prev").addClass("disabled")
+  }
+  ,onSlideChangeStart:function(){
+      $(".info_prev2").hasClass("swiper-button-disabled")?$(".info_prev").addClass("disabled"):$(".info_prev").removeClass("disabled"),
+      $(".info_next2").hasClass("swiper-button-disabled")?$(".info_next").addClass("disabled"):$(".info_next").removeClass("disabled")
+  },
+}
+);
+$(".section1").on("click",".info_prev",function(){
+$(".info_prev2").click()
+}
+).on("click",".info_next",function(){
+$(".info_next2").click()
+}
+)
+ /*part6-3dlunbo */  
+var certifySwiper = new Swiper('#certify .swiper-container', {
+	watchSlidesProgress: true,
+  effect : 'coverflow',
+  coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: 30,
+          modifier: 1,
+          slideShadows: true,
+     },
+	slidesPerView: 'auto',  spaceBetween:0,
+	centeredSlides: true,
+loop: true,
+	loopedSlides: 3,
+autoplay: true,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		clickable :true,
+	},
+	on: {
+    resize: function () {
+            setTimeout(function(){
+              certifySwiper.update()
+            },500)
+            
+     },
+		progress: function(progress) {
+			for (i = 0; i < this.slides.length; i++) {
+				var slide = this.slides.eq(i);
+				var slideProgress = this.slides[i].progress;
+				modify = 1;
+				if (Math.abs(slideProgress) > 1) {
+					modify = (Math.abs(slideProgress) - 1) * 0.5 + 1;
+				}
+				translate = slideProgress * modify *8.6 + 'rem';
+				scale = 1 - Math.abs(slideProgress) / 5;
+				zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+				slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+				slide.css('zIndex', zIndex);
+				slide.css('opacity', 1);
+				if (Math.abs(slideProgress) > 3) {
+					slide.css('opacity', 0);
+				}
+			}
+		},
+		setTransition: function(transition) {
+			for (var i = 0; i < this.slides.length; i++) {
+				var slide = this.slides.eq(i)
+				slide.transition(transition);
+			}
+
+		}
+	}
+
+})
+
+//     //文字滚动时，禁止全屏滚动
+$(function () {
+    $('.scroll').hover(function () {
+      swiper1.mousewheel.disable();
+    }, function () {
+      swiper1.mousewheel.enable();
+    })
+}) 
+//这个世界弹窗	
+function openModal() {
+			document.getElementById('myModal').style.display = "block";
+		}
+		
+		function closeModal() {
+			document.getElementById('myModal').style.display = "none";
+		}
+		
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+		
+			var captionText = document.getElementById("caption");
+			if (n > slides.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+		
+			slides[slideIndex-1].style.display = "block";
+			
+		
+		}
+</script>
 </body>
 </html>
