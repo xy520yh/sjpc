@@ -88,10 +88,14 @@
 <div class="header">
   <div class="header_common">
     <div class="header_left"> 
-      <div class="header_logo"><a href="#" target="_blank"><img src="images/common_logo.png" alt="" /></a></div>
+      <div class="header_logo"><a href="javascript:void(0)" class="home"><img src="images/common_logo.png" alt="" /></a></div>
       <div class="header_nav">
-        <a href="#" class="active">HOME</a><a href="list.html">NEWS</a><a href="#" class="characters">CHARACTERS</a><a href="#" class="flower">FLOWER FAIRIES</a>
-        <a href="#" class="shots">SHOTS</a><a href="#" class="features">FEATURES</a>                                                 
+        <a href="javascript:void(0)" class="active home">HOME</a>
+        <a href="list.html">NEWS</a>
+        <a href="javascript:void(0)" class="characters">CHARACTERS</a>
+        <a href="javascript:void(0)" class="flower">FLOWER FAIRIES</a>
+        <a href="javascript:void(0)" class="shots">SHOTS</a>
+        <a href="javascript:void(0)" class="features">FEATURES</a>                                                 
       </div>
     </div>
     <div class="header_right">
@@ -102,7 +106,7 @@
   </div>
 </div>
 <!--主体内容-->
-<div class="swiper-container swiper-fullscreen">
+<div class="swiper-container swiper-fullscreen" data-hash="slide01">
   <div class="swiper-wrapper">
     <!--part1-->
     <div class="swiper-slide slide1 swiper-no-swiping" data-hash="slide01">
@@ -522,6 +526,9 @@ $('.characters').click(function(){
     swiper1.slideTo(2);
 });
 
+$('.home').click(function(){
+    swiper1.slideTo(0);
+});
 $('.flower').click(function(){
     swiper1.slideTo(3);
 });
