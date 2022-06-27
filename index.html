@@ -602,7 +602,11 @@ var mySwiper=new Swiper(".infoList",{
     nextEl: ".info_next2",
     prevEl: ".info_prev2",
   },
- 
+  autoplay: {
+    delay: 1000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+    },
   scrollbar: {
     el: ".info_bar",
     // hide: true,
