@@ -5,7 +5,7 @@
 .header_left{display:flex;}
 .header_logo{width:1.75rem;height:0.66rem;}
 .header_logo img{width:1.75rem;height:0.66rem;}
-.header_nav{display:flex;height:100%;align-items:center;letter-spacing:5px;position:relative;}
+.header_nav{display:flex;height:0.4rem;top:0.1rem;align-items:center;letter-spacing:5px;position:relative;}
 .header_nav a{padding:0 30px;font-size:0.2rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;letter-spacing:0.01rem;color:#fff;
     font-weight: normal;
 }
