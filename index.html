@@ -87,7 +87,7 @@
     <div class="header_left"> 
       <div class="header_logo"><a href="javascript:void(0)" class="home"><img src="images/common_logo.png" alt="" /></a></div>
       <div class="header_nav">
-        <a href="javascript:void(0)" class="active home">HOME222</a>
+        <a href="javascript:void(0)" class="active home">HOME444</a>
         <a href="list.html">NEWS</a>
         <a href="javascript:void(0)" class="characters">CHARACTERS</a>
         <a href="javascript:void(0)" class="flower">FLOWER FAIRIES</a>
@@ -501,7 +501,7 @@
   </div>
 </div>
 <script src="js/jquery.min.js"></script>
-<script src="js/devicerem.js"></script>
+<!-- <script src="js/devicerem.js"></script> -->
 <script src="js/swiper.min.js"></script>
 <script src="js/qiehuan.js"></script>
 <script>
@@ -631,109 +631,109 @@ $('.features').click(function(){
 // }
 // )
  /*part6-3dlunbo */  
-var certifySwiper = new Swiper('#certify .swiper-container', {
-	watchSlidesProgress: true,
-  effect : 'coverflow',
-  coverflowEffect: {
-          rotate: 20,
-          stretch: 0,
-          depth: 30,
-          modifier: 1,
-          slideShadows: true,
-     },
-	slidesPerView: 'auto',  spaceBetween:0,
-	centeredSlides: true,
-loop: true,
-	loopedSlides: 3,
-autoplay: true,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	pagination: {
-		el: '.swiper-pagination',
-		clickable :true,
-	},
-	on: {
-    resize: function () {
-            setTimeout(function(){
-              certifySwiper.update()
-            },500)
+// var certifySwiper = new Swiper('#certify .swiper-container', {
+// 	watchSlidesProgress: true,
+//   effect : 'coverflow',
+//   coverflowEffect: {
+//           rotate: 20,
+//           stretch: 0,
+//           depth: 30,
+//           modifier: 1,
+//           slideShadows: true,
+//      },
+// 	slidesPerView: 'auto',  spaceBetween:0,
+// 	centeredSlides: true,
+// loop: true,
+// 	loopedSlides: 3,
+// autoplay: true,
+// 	navigation: {
+// 		nextEl: '.swiper-button-next',
+// 		prevEl: '.swiper-button-prev',
+// 	},
+// 	pagination: {
+// 		el: '.swiper-pagination',
+// 		clickable :true,
+// 	},
+// 	on: {
+//     resize: function () {
+//             setTimeout(function(){
+//               certifySwiper.update()
+//             },500)
             
-     },
-		progress: function(progress) {
-			for (i = 0; i < this.slides.length; i++) {
-				var slide = this.slides.eq(i);
-				var slideProgress = this.slides[i].progress;
-				modify = 1;
-				if (Math.abs(slideProgress) > 1) {
-					modify = (Math.abs(slideProgress) - 1) * 0.5 + 1;
-				}
-				translate = slideProgress * modify *8.6 + 'rem';
-				scale = 1 - Math.abs(slideProgress) / 5;
-				zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
-				slide.transform('translateX(' + translate + ') scale(' + scale + ')');
-				slide.css('zIndex', zIndex);
-				slide.css('opacity', 1);
-				if (Math.abs(slideProgress) > 3) {
-					slide.css('opacity', 0);
-				}
-			}
-		},
-		setTransition: function(transition) {
-			for (var i = 0; i < this.slides.length; i++) {
-				var slide = this.slides.eq(i)
-				slide.transition(transition);
-			}
+//      },
+// 		progress: function(progress) {
+// 			for (i = 0; i < this.slides.length; i++) {
+// 				var slide = this.slides.eq(i);
+// 				var slideProgress = this.slides[i].progress;
+// 				modify = 1;
+// 				if (Math.abs(slideProgress) > 1) {
+// 					modify = (Math.abs(slideProgress) - 1) * 0.5 + 1;
+// 				}
+// 				translate = slideProgress * modify *8.6 + 'rem';
+// 				scale = 1 - Math.abs(slideProgress) / 5;
+// 				zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+// 				slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+// 				slide.css('zIndex', zIndex);
+// 				slide.css('opacity', 1);
+// 				if (Math.abs(slideProgress) > 3) {
+// 					slide.css('opacity', 0);
+// 				}
+// 			}
+// 		},
+// 		setTransition: function(transition) {
+// 			for (var i = 0; i < this.slides.length; i++) {
+// 				var slide = this.slides.eq(i)
+// 				slide.transition(transition);
+// 			}
 
-		}
-	}
+// 		}
+// 	}
 
-})
+// })
 
 //     //文字滚动时，禁止全屏滚动
-$(function () {
-    $('.scroll').hover(function () {
-      swiper1.mousewheel.disable();
-    }, function () {
-      swiper1.mousewheel.enable();
-    })
-}) 
+// $(function () {
+//     $('.scroll').hover(function () {
+//       swiper1.mousewheel.disable();
+//     }, function () {
+//       swiper1.mousewheel.enable();
+//     })
+// }) 
 //这个世界弹窗	
-function openModal() {
-			document.getElementById('myModal').style.display = "block";
-		}
+// function openModal() {
+// 			document.getElementById('myModal').style.display = "block";
+// 		}
 		
-		function closeModal() {
-			document.getElementById('myModal').style.display = "none";
-		}
+// 		function closeModal() {
+// 			document.getElementById('myModal').style.display = "none";
+// 		}
 		
-		var slideIndex = 1;
-		showSlides(slideIndex);
+// 		var slideIndex = 1;
+// 		showSlides(slideIndex);
 		
-		function plusSlides(n) {
-			showSlides(slideIndex += n);
-		}
+// 		function plusSlides(n) {
+// 			showSlides(slideIndex += n);
+// 		}
 		
-		function currentSlide(n) {
-			showSlides(slideIndex = n);
-		}
+// 		function currentSlide(n) {
+// 			showSlides(slideIndex = n);
+// 		}
 		
-		function showSlides(n) {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
+// 		function showSlides(n) {
+// 			var i;
+// 			var slides = document.getElementsByClassName("mySlides");
 		
-			var captionText = document.getElementById("caption");
-			if (n > slides.length) {slideIndex = 1}
-			if (n < 1) {slideIndex = slides.length}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
+// 			var captionText = document.getElementById("caption");
+// 			if (n > slides.length) {slideIndex = 1}
+// 			if (n < 1) {slideIndex = slides.length}
+// 			for (i = 0; i < slides.length; i++) {
+// 				slides[i].style.display = "none";
+// 			}
 		
-			slides[slideIndex-1].style.display = "block";
+// 			slides[slideIndex-1].style.display = "block";
 			
 		
-		}
+// 		}
 </script>
 </body>
 </html>
