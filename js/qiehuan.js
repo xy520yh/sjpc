@@ -66,7 +66,32 @@ $('.tc_main_big .closed').click(function(){
   $(this).parent().parent().css('display','none');
   $('.masked').css('display','none');
 })
+
+
+
+$('.law_text1').click(function(){
+  $(' .masked').css('display','block');
+$('.tc_text_tip_wrap').css('display','block');
 })
+$('.tc_text_tip_wrap .closed').click(function(){
+  $(this).parent().parent().css('display','none');
+  $('.masked').css('display','none');
+})
+
+
+
+$('.law_text2').click(function(){
+  $(' .masked').css('display','block');
+$('.tc_msg_bg_wrap').css('display','block');
+})
+$('.tc_msg_bg_wrap .closed').click(function(){
+  $(this).parent().parent().css('display','none');
+  $('.masked').css('display','none');
+})
+
+
+})
+
 // $(function () {
 //   var bgm = new Audio();
 //     bgm.src = 'music/BGM.mp3';
