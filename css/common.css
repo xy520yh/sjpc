@@ -531,7 +531,8 @@ a.sidebar_subtitle{display:block;color:#999;font-size:0.28rem;margin-top:0.4rem;
 .sidebar_box  .closed img:hover{transform:rotate(90deg)}
 
 .bg-video{width:100%;height:100vh;display:block;object-fit:cover;position:absolute;top:0;left:0;}
-
+/* .slide1 video{display:block;/* width:750px; *//* height:100vh; *//* object-fit:cover; v}
+.bgvideo{max-width:100%;min-height:100%;object-fit:cover;z-index:3;} */
 
 
 
