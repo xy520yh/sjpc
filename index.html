@@ -1,748 +1,827 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Legend of Neverland</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <link href="css/header.css"     rel="stylesheet">
-    <link href="css/animate.css"     rel="stylesheet">
-    <link href="css/swiper.min.css" rel="stylesheet" >
-    <link href="css/index.css"      rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico"/>
-</head>   
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/swiper.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <!-- <link href="css/style.css" rel="stylesheet"> -->
+  <link href="css/common.css" rel="stylesheet">
+  <link href="css/colorbox.css" rel="stylesheet">
+  <title>레오네: 레전드 오브 네버랜드</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+</head>
+
 <body>
-
-<!--蒙层--> 
+  <!--蒙层--> 
+<!-- <div class="masked" id="masked"></div> -->
 <div class="masked" id="masked"></div>
-
-<!--the world--> 
-<div id="myModal" class="modal">
- 
+<!--预注册对应弹窗-->
+<div class="tc_success_big" id="tc_succes_big" style="display:block;"> 
+  <div class="tc_main_big">
+    <div class="closed"><img src="images/tc_closed.png" alt=""></div>
+    <div class="success_wrap">
+      <div class="success_text">
+        <p>사전예약을 완료하셨습니다!<br/>스토어 예약을 하시면 더 많은 보상이</p>
+      </div>
+      <div class="success_btn">
+        <a href="https://leone.onelink.me/6pAM/iek7n7x2" target="_blank"><img src="images/part2_tc_btn1.png"></a>
+      </div>
+      <div class="success_text">
+        <p>사전예약을 완료하셨습니다!<br/>스토어 예약을 하시면 더 많은 보상이</p>
+      </div>
+      <div class="success_btn">
+        <a href="https://game.naver.com/lounge/The_Legend_of_Neverland/board/detail/851161" target="_blank"><img src="images/part2_tc_btn2.png"></a>
+      </div>  
+    </div>
+  </div>   
+</div> 
+<!--弹窗单个文案提示-->
+ <div class="tc_text_tip_wrap"  style="display:block;"> 
+  <div class="tc_text_tip_bg">
+    <div class="closed"><img src="images/tc_closed.png" alt=""></div>
+    <div class="text_wrap">
+      <P>휴대폰 번호를</P>
+      <P>정확히 입력해주세요.</P>
+    </div>
+  </div>   
+</div>
+<!--弹窗带按钮文案提示-->
+<div class="tc_text_tip_wrap"  style="display: none;"> 
+  <div class="tc_text_tip_bg">
+    <div class="closed"><img src="images/tc_closed.png" alt=""></div>
+    <div class="btn_wrap">
+      <h4>이벤트 등 프로모션 알림 수신 동의</h4>
+      <P>Ark Games Global Pte. Ltd.에서<br>제공하는 모든 게임 서비스 및 이벤트와 관련된<br/>프로모션 알림 수신에 동의합니다.</P>
+       <h6><img src="images/tc_btn.png"></h6>
+    </div>
+  </div>   
+</div> 
+<!--弹窗多组文案提示-->
+ <div class="tc_msg_bg_wrap"  style="display: none;"> 
+  <div class="tc_msg_bg">
+    <div class="closed"><img src="images/tc_closed.png" alt=""></div>
+    <div class="msg_wrap">
+      <h4>개인정보 수집 및 이용 동의 안내</h4>
+      <P>Arkgames는 모바일 게임 ‘레오네: 레전드 오브 네버랜드’ 사전예약 <br/>
+        이벤트와 관련하여  <br>개인정보 수집 이용을 위해 [정보통신망법] 제 22조, 제 24조의 2. [개인정보<br/>보호법] 제15조, 제 17조, 제 22조에 따라 귀하의 동의를 받고자 합니다.</P>
+      <h5>개인정보 수집/이용 동의</h5>
+      <P>1.개인 정보 수집 이용 동의<br/>
+        게임 사전예약 업데이트 등 이벤트 프로모션 알림 전송<br/>
+        2. 개인 정보 수집 항목: 휴대폰 번호, OS 정보<br/>
+        *동의를 거부할 경우 사전등록이 불가능 합니다</P>
+      <h5>개인정보 수집/이용 동의</h5>
+      <P>Arkgames는 다음과 같이 개인정보를 위탁하고 있습니다.<br/>-㈜)마더네스트. 이벤트 등  프로모션 알림 전송</P>
+      <h6><img src="images/tc_btn.png"></h6>
+    </div>
+  </div>   
+</div>  
+<!--part7游戏介绍弹出对应--> 
+<div id="myModal" class="modal" style="display: none">
   <div class="modal-content">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <span class="close_role cursor" onclick="closeModal()"><img src="images/tc_closed.png" alt=""></span>
     <div class="mySlides">
-     
-      <img src="images/part5_img1.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-     
-      <img src="images/part5_img2.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-     
-      <img src="images/part5_img3.jpg" style="width:100%">
-    </div>
-    
-    <div class="mySlides">
-     
-      <img src="images/part5_img4.jpg" style="width:100%">
+      <div class="role_tc_wrap">
+        <div class="role_left"><img src="images/part7_role_tc_img1.png"></div>
+        <div class="role_right">
+          <div class="role_tc_title"><h4><span>검투사</span></h4></div>
+          <div class="role_tc_text">
+            <p>칼날을 빼내는 순간, 칼끝이 향하는 곳. <br/>마치 노을처럼 반짝이네.<br/>검술사는 블레이드를 무기로 사용하며 <br/>근접 전투에 능하다. <br/>강력한 힘을 폭발 시켜 모든 것을 <br/>베어낸다! </p>
+          </div>
+          <div class="role_tc_skill"><img src="images/part7_role_tc_skill1.png"></div>
+          <div class="role_tc_video"><a class="videoBtn" href="https://www.youtube.com/embed/TpKgJEfNsYk"><img src="images/part7_video_img4.png"></a></div>
+        </div>
+      </div>
     </div>
     <div class="mySlides">
-      
-      <img src="images/part5_img5.jpg" style="width:100%">
-    </div>
-    
-    <div class="mySlides">
-     
-      <img src="images/part5_img6.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-     
-      <img src="images/part5_img7.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-     
-      <img src="images/part5_img8.jpg" style="width:100%">
-    </div>
-    
-    <div class="mySlides">
-     
-      <img src="images/part5_img9.jpg" style="width:100%">
+      <div class="role_tc_wrap">
+        <div class="role_left"><img src="images/part7_role_tc_img2.png"></div>
+        <div class="role_right">
+          <div class="role_tc_title"><h4><span>레인저</span></h4></div>
+          <div class="role_tc_text">
+            <p>가장 천부적인 마법사만이 학자라는<br/>이름을 짊어질 수 있다.<br/>진리가 기록된 신비한 서적. 학자에게 <br/>유일무이하고도 강력한 힘을 <br/>부여한다. 
+          </div>
+          <div class="role_tc_skill"><img src="images/part7_role_tc_skill2.png"></div>
+          <div class="role_tc_video"><a class="videoBtn" href="https://www.youtube.com/embed/OzETaxsNmX4"><img src="images/part7_video_img2.png"></a></div>
+         
+        </div>
+      </div>
     </div>
     <div class="mySlides">
-      
-      <img src="images/part5_img10.jpg" style="width:100%">
+      <div class="role_tc_wrap">
+        <div class="role_left"><img src="images/part7_role_tc_img3.png"></div>
+        <div class="role_right">
+          <div class="role_tc_title"><h4><span>학자</span></h4></div>
+          <div class="role_tc_text">
+            <p>전장을 활공하는 매처럼 날카로운 화살 <br/>끝이 사냥감을 노린다'\n\n레인저는 <br/>그 누구도 따라올 수 없는 기동성과 <br/>그 누구도 따라올 수 없는 기동성과 <br/>전술 속에서 적의 약점을 파악하여
+              <br/>일격필살을 노린다. 
+          </div>
+          <div class="role_tc_skill"><img src="images/part7_role_tc_skill3.png"></div>
+          <div class="role_tc_video"><a class="videoBtn" href="https://www.youtube.com/embed/6Uaw0An39sg"><img src="images/part7_video_img3.png"></a></div>
+        </div>
+      </div>
     </div>
-    
-    
+    <div class="mySlides">
+      <div class="role_tc_wrap">
+        <div class="role_left"><img src="images/part7_role_tc_img4.png"></div>
+        <div class="role_right">
+          <div class="role_tc_title"><h4><span>공예가</span></h4></div>
+          <div class="role_tc_text">
+            <p>'메카닉과 연금술이 어우러지는 <br>총기의 교향곡연금술의  <br>원리를 총포에 녹여낸 공예가. <br/>사대 원소 속성을 조화롭게 <br/>사용하여 순간적으로 화력을 <br/>집중할 수 있다.
+          </div>
+          <div class="role_tc_skill"><img src="images/part7_role_tc_skill4.png"></div>
+          <div class="role_tc_video"><a class="videoBtn" href="https://www.youtube.com/embed/QVa12boMCYg"><img src="images/part7_video_img1.png"></a></div>
+          
+        </div>
+      </div>
+    </div>
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
     <div class="caption-container">
       <p id="caption"></p>
     </div>
    
   </div>
 </div>
-<!--公共头部-->
-<div class="header">
-  <div class="header_common">
-    <div class="header_left"> 
-      <div class="header_logo"><a href="javascript:void(0)" class="home"><img src="images/common_logo.png" alt="" /></a></div>
-      <div class="header_nav">
-        <a href="javascript:void(0)" class="active home">HOME</a>
-        <a href="list.html">NEWS</a>
-        <a href="javascript:void(0)" class="characters">CHARACTERS</a>
-        <a href="javascript:void(0)" class="flower">FLOWER FAIRIES</a>
-        <a href="javascript:void(0)" class="shots">SHOTS</a>
-        <a href="javascript:void(0)" class="features">FEATURES</a>                                                 
+<!--菜单弹窗-->
+<div class="nav_box">
+  <div class="nav_box_main">
+      <div class="nav_top">
+          <div class="closed"><img src="images/menu_closed.png"></div>
+      </div> 
+      <div class="nav_btn">
+          <div class="nav_link">
+              <div class="link01  active part1"><a href="index.html">메인</a></div>
+              <div class="link02 link part2"><a href="javascript:void(0)">사전예약</a></div>
+              <div class="link03 link part3" ><a href="javascript:void(0)">이벤트</a></div>
+              <div class="link05 link part5"><a href="javascript:void(0)">게임소개</a></div>
+              <div class="link09 link part9"><a href="javascript:void(0)">미디어</a></div>
+              <div class="link06 link features">
+                <a class="common_ico_follow" href="https://game.naver.com/lounge/The_Legend_of_Neverland/home" target="_blank"><img src="images/nav_game.png" alt=""/></a>
+                <a class="common_ico_fb" href="https://www.youtube.com/channel/UCLFaQOsc0oVt4UvSDTtek1w" target="_blank"><img src="images/nav_yt.png" alt=""/></a>
+                <a class="common_ico_game" href="#" target="_blank"><img src="images/nav_link.png" alt=""/></a>
+              </div>
+          </div>
       </div>
-    </div>
-    <div class="header_right">
-      <a class="common_ico_follow" href="#"><img src="images/common_ico_follow.png" alt=""/></a>
-      <a class="common_ico_fb" href="https://www.facebook.com/LONGLOBAL" target="_blank"><img src="images/common_ico_fb.png" alt=""/></a>
-      <a class="common_ico_game" href="https://discord.gg/TBFDKsqUbB" target="_blank"><img src="images/common_ico_game.png" alt=""/></a>
-    </div>
   </div>
 </div>
-<!--主体内容-->
-<div class="swiper-container swiper-fullscreen">
-  <div class="swiper-wrapper">
-    <!--part1-->
-    <div class="swiper-slide slide1" data-hash="slide01">
-        <div class="page01_bg ">
-          <div class="page">
-          <video src="media/index_bg.mp4" class="bg-video" muted="" loop="loop" autoplay="autoplay"></video></div>
-          <div class="part1_text_bg"><img src="images/part1_text_bg.png"></div>
-          <div class="container">
-            <div class="part1_ico">
-              <a href="https://longlobal.onelink.me/e7jh/tbodpc51" target="_blank"><img src="images/part1_ios_ico.png"></a>
-              <a href="https://longlobal.onelink.me/e7jh/tbodpc51" target="_blank"><img src="images/part1_gg_ico.png"></a>
-            </div>
+  <div class="common_menu"><img src="images/part1_menu.png"></div>
+  <div class="swiper-container swiper-fullscreen">
+    <div class="swiper-wrapper">
+        <!--part1-->
+      <div class="swiper-slide slide1" data-hash="slide01">
+        <div class="main_show">
+          <div class="bgm_icon"> <img src="images/part1_music.png" id="bgm_icon"></div>
+                   <div class="part1_logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.15s"><img src="images/part1_logo.png"></div>
+              <div class="part1_solgen ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.24s"><img src="images/part1_solgen.png"></div>
+              <div class="part1_video_btn ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5S" swiper-animate-delay="0.35s">
+                <a class="part1_video_play video1 ani" id="playbtn" href="http://www.youtube.com/embed/thf3JNxwpdU/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22"><div><span></span></div></a> 
+              </div>
+              <div class="part1_btn ani"  swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5S" swiper-animate-delay="0.45s"><img src="images/part1_btn.png"></div>
+              <div class="part1_down"><img src="images/part1_down.png"></div>
+              <div class="part1_footer"><img src="images/part1_footer.png"></div>
           </div>
+ 
+      </div>
+        <!--part2-->
+      <div class="swiper-slide slide2" data-hash="slide02">
+        <div class="main_show">
+          <div class="part2_register_slogen"><img src="images/part2_regitster_solgen.png"></div>
+            <div class="register_left_bottom">
+            
+              <div class="part2_register_text">사전예약 기간: 2022.09.29 ~  게임 런칭 전</div>
+              <div class="part2_award_gift">
+                <img src="images/part2_award_gift.png">
+              </div>
+              <div class="ios_tab">
+                <lable class="one gg"><span class='input_style radio_bg'><input type="radio" name="type" value="and" checked="checked"></span><strong><img src="images/part2_ico_gg.png"></strong></lable>
+                <lable class="one ios"><span class='input_style radio_bg'><input type="radio" name="type" value="ios"></span><strong><img src="images/part2_ico_ios.png"></strong></lable>
+              </div>
+            <div class="register_input" >
+                <P><span>010<strong class="line"></strong></span><input name="mobile" type="text"  class="text_content1" value="휴대폰 번호를 입력 （-없이 입력)"/></P>
+            </div>
+            <div class="register_checkbox_tip">
+              <P><input type="checkbox" id="checkbox1"><label for="checkbox1"> 아래 내용을 모두 확인했으며, 모두 동의합니다.</label></P>  
+              <P><input type="checkbox" id="checkbox2"><label for="checkbox2"> [필수] 레오네 사전예약 이벤트 및 프로모션 알림 수신동의  <a href="#">자세히 보기</a></label></P> 
+              <P><input type="checkbox" id="checkbox3"><label for="checkbox3">[필수] 사전예약 개인정보 수집 및 이용 동의 <a href="#">자세히 보기</a></P> 
+            </div>
+            <div class="register_yy_btn  re_btn">
+              <a href="#"><img src="images/part2_law_tip1.png"></a>
+            </div>
+            <div class="register_law_tip_btn re_btn">
+              <a href="#"><img src="images/part2_law_tip.png"></a>
+            </div>
+
+            <div class="register_law_tip">
+              <P>사전예약 완료 시 특별한 혜택을 드립니다!</P>
+            </div>
+          
+            <div class="register_cbt_tip">
+              <P> CBT 자동 응모 이벤트 안내</P>
+              <P>*공식 홈페이지를 통해 사전예약 신청 시 CBT에 자동 응모됩니다.</P>
+              <P>*CBT 당첨 안내는 LMS를 통해 확인 가능합니다.</P>
+              <P>*CBT는 안드로이드 기기 이용자에 한해 진행됩니다。</P>
+            </div>
+            </div>
         </div>
-    </div>
-    <!--part2-->
-    <div class="swiper-slide slide2" data-hash="slide02"> 
-      <div class="page02_bg">
-          <div class="mainShow1">
-             
+      </div>
+      <div class="swiper-slide slide3" data-hash="slide03">
+        <div class="main_show">
+          <div class="part3_top">
+            <div class="part3_slogen ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="images/part3_sologen.png"></div>
+            <div class="part3_title ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="images/part3_title1.png"></div>
+          </div>
+          <div class="part3_dc">
               <div class="dc_bg">
-                <img src="images/part2_dc_bg.png" class="dc_bg_img">
-                <div class="dc dc_10_hover"><img src="images/part2_dc.png"></div>
-                <div class="dc dc_20_hover"><img src="images/part2_dc.png"></div>
-                <div class="dc dc_40_hover"><img src="images/part2_dc.png"></div>
-                <div class="dc dc_70_hover"><img src="images/part2_dc.png"></div>
-                <div class="dc dc_100_hover"><img src="images/part2_dc.png"></div> 
-                <!-- <div class="dc dc_200_hover"><img src="images/part2_dc.png"></div>  -->
-                <div  class="part2_regitster"><a href="https://longlobal.onelink.me/e7jh/tbodpc51" target="_blank"><img src="images/part2_regitser.png"></a></div>
+                <div class="dc_20_hover dc ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.35s">
+                  <img src="images/part3_dc_img_hover.png" ></div>
+                <div class=" dc_50_hover dc ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.45s">
               </div>
-             
-              
-              <div class="part2_ico">
-                <a href="https://longlobal.onelink.me/e7jh/tbodpc51" target="_blank"><img src="images/part2_ico_ios.png" class="part2_store_ios"></a>
-                <a href="https://longlobal.onelink.me/e7jh/tbodpc51" target="_blank"><img src="images/part2_ico_gg.png" class="part2_store_gg"></a>
+                <div class=" dc_70_hover dc ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.55s">
+                  </div>
               </div>
-            </div>     
+              <div class="dc_bg1">
+                <div class=" dc_100_hover dc ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.65s">
+                  <img src="images/part3_dc_img_hover.png"></div>
+                <div class=" dc_150_hover dc ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.75s">
+                  </div> 
+              </div>
+              <div  class="part3_regitster ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.85s"><a href="javascript:void()"><img src="images/part3_btn.png"></a></div>   
+              <div  class="part3_tip ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.95s">
+                <img src="images/part3_tip.png">
+                <!-- <P>*해당 이벤트는 사전예약 완료 대상자 모두에게 지급됩니다.</P>
+                <P>*보상 이미지는 추후 변경 될 수 있습니다.</P> -->
+              </div>   
+          </div> 
+         
       </div>  
-  </div>
-    <!--part3-->
-    <div class="swiper-slide slide3"  data-hash="slide03"> 
-        <div class="page03_bg">
-            <div class="mainShow2">
-                    <div class="game_roles">
-                        <div class="swiper-container roles_wrap">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide slide1">
-                                  <div class="role_jineng role_jineng4">
-                                    <h2>Craftsman</h2>
-                                  </div>
-                                  <div class="role_info role_info1">
-                                    <P>Craftsmen integrate the principles of alchemy into guns, stimulate the four elemental attributes, and pour out firepower in an instant to wipe out their enemies.</P>
-                                  </div>
-                                  <div class="role_img1 role_img"></div>
-                                </div>
-                                <div class="swiper-slide slide2">
-                                  <div class="role_jineng role_jineng1">
-                                    <h2>Gladiator</h2>
-                                  </div>
-                                  <div class="role_info role_info2">
-                                    <P>Gladiators use the katana as their weapon and are good at close combat, showing amazing strength whirling a sharp blade!</P>
-                                  </div>
-                                  <div class="role_img2 role_img"></div>
-                                </div>
-                                <div class="swiper-slide slide3">
-                                  <div class="role_jineng role_jineng2">
-                                    <h2>Ranger</h2>
-                                  </div>
-                                  <div class="role_info role_info3">
-                                    <P>Rangers have unparalleled mobility and agility, they find the weakness of the enemy and move to kill in one shot!</P>
-                                  </div>
-                                  <div class="role_img3 role_img"></div>
-                                </div>
-                                <div class="swiper-slide slide4">
-                                  <div class="role_jineng role_jineng3">
-                                    <h2>Scholar</h2>
-                                  </div>
-                                  <div class="role_info role_info4">
-                                    <P>The magic book held in the hand contains many mysteries, allowing them to deal great damage. They are good at defeating enemies with spells from a distance.</P>
-                                  </div>
-                                  <div class="role_img4 role_img"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dock_list">
-                        <ul class="swiper_dock_list">
-                            <li > 
-                              <a href="javascript:void(0)"><img class="icon" src="images/part3_small_hover_01.png"/></a>
-                            </li>
-                            <li>
-                              <a href="javascript:void(0)"><img class="icon on" src="images/part3_small_hover_01.png"/></a>
-                            </li>
-                            <li>
-                              <a href="javascript:void(0)"><img class="icon" src="images/part3_small_hover_01.png"/></a>
-                            </li>
-                            <li>
-                              <a href="javascript:void(0)"><img class="icon" src="images/part3_small_hover_01.png"/></a>
-                            </li>
-                        </ul>
-                        </div>
-                    </div>   
+      
+        </div>
+
+
+      <div class="swiper-slide slide4">
+        <div class="main_show">
+          <div class="part4_hd_solgen" ><img src="images/part4_hd_solgen.png"></div>
+          <div class="part4_bottom">
+             <div class="part4_hd_title"><img src="images/part4_hd_title.png"></div>
+            <div class="part4_hd_gift"><img src="images/part4_hd_gift.png"></div>
+            <div class="part4_hd_text"><img src="images/part4_hd_text.png"></div>
+            <div class="part4_hd_btn"><a href="https://game.naver.com/lounge/The_Legend_of_Neverland/board/detail/851161"><img src="images/part4_hd_btn.png"></a></div>
+        </div>
+      </div>  
+      </div>
+      <div class="swiper-slide slide5" data-hash="slide05">  
+        <div class="main_show">
+          <div class="part5_video_slogen ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="images/part5_video_title.png"></div>
+        
+              <div class="main_center  ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <div class="swiper-container page5_swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="videoBtn  video1" href="http://www.youtube.com/embed/6Uaw0An39sg/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img1.png" data-url="#"> </a>
+                    </div>
+
+                    <div class="swiper-slide">  <a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22">
+
+                   <img src="images/part5_video_img2.png" data-url="#"></a> </div>
+                    <div class="swiper-slide">  <a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" >
+                     <img src="images/part5_video_img3.png" data-url="#"></a></div>
+                    <div class="swiper-slide">  <a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" >
+
+                  <img src="images/part5_video_img4.png" data-url="#"></a></div>
+                  </div>
+                  <!-- <div class="swiper-pagination"></div> -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  </div>
               </div>
+         
+          
+                <!-- <div class="part_video_img">
+                  <div class="part_video_img1 part_video_img0 ani" style="margin-right:0.1rem" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.35s" swiper-animate-delay="0.3s"><a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img1.png"></a></div>
+                  <div class="part_video_img2 part_video_img0 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.45s"><a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img2.png"></a></div>
+                  <div class="part_video_img3 part_video_img0 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.55s"><a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img3.png"></a></div>
+                  <div class="part_video_img4 part_video_img0 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.65s"><a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img4.png"></a></div>
+                </div> -->
+              </div>
+           </div>     
+      
+
+      <div class="swiper-slide slide6 " data-hash="slide06"  > 
+        <div class="main_show">
+       
+              <div class="part6_introduction_title ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.25s"><img src="images/part6_introduction_title.png"></div>
+              <div  class="part_introduction_text ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.25s">
+                <!-- <a href="http://www.youtube.com/embed/thf3JNxwpdU/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" target="_blank" class="video1"> -->
+                  <div class="ani part_introduction_text_btn" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5S" swiper-animate-delay="0.55s">
+                    <a class="part_introduction_text_btn_play video1" id="playbtn" href="http://www.youtube.com/embed/thf3JNxwpdU/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22"><div><span></span></div></a> 
+                  </div>
+               </div> 
+          
         </div>  
-    </div>
-    <!--part4-->
-    <div class="swiper-slide slide4" data-hash="slide04"> 
-        <div class="part4_fw"></div> 
-        <div class="page04_bg">
-          <div class="mainShow1">
-          <div class="role">
-            <div class="list">
-              <div class="swiper-container part4_swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="images/part4_mzsh_small.png" /></div>
-                  <div class="swiper-slide"><img src="images/part4_sly_small.png" /></div>
-                  <div class="swiper-slide"><img src="images/part4_jg_small.png" /></div>
-                  <div class="swiper-slide"><img src="images/part4_zyh_small.png" /></div>
-                  <div class="swiper-slide"><img src="images/part4_sl_small.png" /></div>
-                  <div class="swiper-slide"><img src="images/part4_sc_small.png" /></div>
-                  <div class="swiper-slide"><img src="images/part4_ct_small.png" /></div>
-                  <div class="swiper-slide"><img src="images/part4_bdl_small.png" /></div>
-                  <div class="swiper-slide"><img src="images/part4_jzh_small.png" /></div>
-                  <div class="swiper-slide"><img src="images/part4_yjc_small.png" /></div>
-                </div>
+      </div>
+      <!--role_masked-->
+      <div class="swiper-slide slide7" data-hash="slide07" >
+        <div class="main_show">
+          <!-- <video src="media/part6_bg.mp4" class="bg-video" muted="" loop="loop" autoplay="autoplay"></video> -->
+          <div class="part7_top">
+            <div class="part7_role_slogen ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.25s"><img src="images/part7_role_img_03_title.png"></div>
+            <div class="part7_role_text ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><p>수시로 직업 전환이 되는 멀티 직업 시스템, <br/>
+              또다른 자유도를 안겨드립니다.</p></div>
+         </div>
+          <div class="main_center  ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" >
+            <div class="swiper-container page7_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a onclick="openModal();currentSlide(1)" ><img src="images/part7_role_img_01.png" data-url="#"> </a></div>
+                <div class="swiper-slide"><a onclick="openModal();currentSlide(2)" ><img src="images/part7_role_img_02.png" data-url="#"> </a></div>
+                <div class="swiper-slide"><a onclick="openModal();currentSlide(3)" ><img src="images/part7_role_img_03.png" data-url="#"></a></div>
+                <div class="swiper-slide"><a onclick="openModal();currentSlide(4)" ><img src="images/part7_role_img_04.png" data-url="#"></a></div>
               </div>
+              <!-- <div class="swiper-pagination"></div> -->
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
+              </div>
+          </div>
+          <!-- <div class="inner">
+            <div class="content">
+              <div class="part_video_left">
+              
+                <div class="part_video_img">
+                <div class="part_video_img1 ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.35s"><a onclick="openModal();currentSlide(1)" ><img src="images/part7_role_img_01.png"></a></div>
+                <div class="part5_video_img2 ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.45s"><a  onclick="openModal();currentSlide(2)" ><img src="images/part7_role_img_02.png"></a></div>
+                <div class="part_video_img3 ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.55s"><a onclick="openModal();currentSlide(3)" ><img src="images/part7_role_img_03.png"></a></div>
+                <div class="part_video_img4 ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.65s"><a  onclick="openModal();currentSlide(4)" ><img src="images/part7_role_img_04.png"></a></div>
+              </div>
+              </div>
             </div>
-            <dl class="content">
-                <!--曼珠沙华-->
+          </div>      -->
+        </div>
+      </div>
+        <!--part_role_Character-->
+      <div class="swiper-slide slide8" data-hash="slide08" > 
+          <div class="main_show">
+            <div class="part8_top">
+              <div class="part8_solgen"><img src="images/part8_solgen.png"></div> 
+              <div class="part8_title">
+                <P>수만 가지의 전투 포메이션!<br/>
+                  나만의 정령으로 다양한 전투와 레오네 세계로!</P>
+              </div> 
+            </div>
+            <div class="role">
+                <div class="part8_menu">
+                  <div class="list">
+                    <div class="swiper-container part8_swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/part8_bdl_small.png" /></div>
+                        <div class="swiper-slide"><img src="images/part8_sly_small.png" /></div>
+                        <div class="swiper-slide"><img src="images/part8_jg_small.png" /></div>
+                        <div class="swiper-slide"><img src="images/part8_ct_small.png" /></div>
+                        <div class="swiper-slide"><img src="images/part8_sl_small.png" /></div>
+                        <div class="swiper-slide"><img src="images/part8_sc_small.png" /></div>
+                        <div class="swiper-slide"><img src="images/part8_ct_small.png" /></div>
+                        <div class="swiper-slide"><img src="images/part8_zyh_small.png" /></div>
+                        <div class="swiper-slide"><img src="images/part8_jzh_small.png" /></div>
+                        <div class="swiper-slide"><img src="images/part8_yjc_small.png" /></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+              </div>
+              <dl class="content_tro">
+                <!--并蒂莲-->
               <dd>
-                <img src="images/part4_mzsh.png" class="role_people"/>
-                <div class="role_name">Lycoris</div> 
+                 <img src="images/part4_bdl.png" class="role_people"/> 
                 <div class="note">
                   <div class="scroll">
-                    <h3>Extreme Love</h3>
-                    <h4><span>Floriography</span></h4>
-                    <p>The flowers that grow in the dark and shady environment have the hottest colors\nWith full of enthusiasm, she will always keep a extremely strong emotion to the host.</p>
-                    <p> She looks very mature and calm but on the contrary she is a woman who is always for love</p>
-                    <p> If some one is cheating on her, he might not be able to see the sun of the next day. </p>
+                    <h4><span>트윈 로터스</span></h4>
+                    <p>꽃말: 공생<br/>
+                      매우 희귀한 트위 로터스. 언니 멜로디아와 동생<br/>
+                      반주가 함께 나타난다.<br/>
+                      일심동체 쌍둥이 자매지만 인류와 생활하면서 다<br/>
+                      른 성격으로 성장했다.<br/>
+                      한 명은 귀여운 외모와 조용한 성격으로, 다른 한<br/>
+                      명은 활발한 성격을 가지고 있다.<br/>
+                      마녀 형상으로 사람앞에 나타나며, 항상 가지고 다<br/>
+                      니는 악기는 "목숨을 바쳐서라도 수호해야 할 물건<br/>
+                      "이다.
+                    
+                      </p>
+                    
+                  
                   </div>
                 </div>
               </dd>
                 <!-- 十六夜-->
                 <dd>
-                  <img src="images/part4_sly.png" class="role_people"/>
-                  <div class="role_name">Chestnut<br/>Rose</div> 
+                  <img src="images/part4_sly.png" class="role_people"/> 
+            
                   <div class="note">
                     <div class="scroll">
-                      <h3>Defect</h3>
-                      <h4><span>Floriography</span></h4>
-                      <p>She turned off her emotion switch right after [that incident].</p>
-                      <p> She is a girl living for revenge, hiding herself in the shadow of hatred and concealing all her emotions behind her armor. Her biggest wish is to eradicate humans.</p>
-                      <p> Just like the defected Chestnut Rose, she is illiberally obsessed with the beauty of defects.</p>
-                      <p> Human beings with defects in particular.</p>
+                      <h4><span>체스트넛 로즈</span></h4>
+                      <p>꽃말: 결점<br/>「그 사건」 이후, 자신의 감정 버튼을 <br/>
+                        꺼버렸다.<br/>
+                        몸과 마음속에 복수의 그림을 숨기고, 모든 감정을 <br/>
+                        갑옷속에 숨겨 복수만을 위해 살아가는 소녀다. 인<br/>
+                        류의 숙청이 그녀의 유일한 소원이다.<br/>
+                        체스트넛 로즈의 꽃 모양처럼, 결점이 있는 물건에<br/>
+                        집착스러운 모습을 보인다.
+                        </p>
                     </div>
                   </div>
                 </dd>
                 <!--桔梗-->
                 <dd>
-                  <img src="images/part4_jg.png" class="role_people"/>
-                  <div class="role_name">Balloon<br/>Flower</div> 
-                  <div class="note">
-                    <div class="scroll">
-                      <h3>Hopeless Love</h3>
-                      <h4><span>Floriography</span></h4>
-                      <p>Balloon Flower is trustworthy, lively, and never hesitant.</p>
-                      <p>She is introverted and despises sharing or anything.</p>
-                      <p>In most cases, she puts loyalty in front of justice and would do bad things just to follow some orders.</p>
-                      <p>Her sense of [right or wrong] was lost the first time she got into a battle.</p>
-                    </div>
-                  </div>
-                </dd>
-              <!--紫阳花-->
-              <dd>
-                <img src="images/part4_zyh.png" class="role_people"/>
-                <div class="role_name">Hydrangea</div> 
+                  <img src="images/part4_jg.png" class="role_people"/> 
+             
                 <div class="note">
                   <div class="scroll">
-                    <h3>Unpredictable</h3>
-                    <h4><span>Floriography</span></h4>
-                    <p>Her innocent look fits her innocent personality. She is very sweet and amiable.</p>
-                    <p>Hydrangea is very curious and loves to pull pranks. Behind her petite and innocent appearance hides an explosion expert (who often fails her mission though).</p>
-                    <p>Even when something sad happens, she will still face it with humor and she </p>
+                    <h4><span>정령 시스템</span></h4>
+                    <p>꽃말: 절망의 사랑<br/>
+                      발론은 정말 믿을만한 동료이다. <br/>
+                      하지만 자신의 생각을 말하는 것을 좋아하지 않아. 말수<br/>
+                      가 적다.<br/>
+                      발론은 충성이 정의보다 중요하다고 생각하며, 명령에<br/>
+                      무조건 복종한다.<br/>
+                      사람들이 흔히 말하는 선과 악은 버린지 오래다.
+                    
+                      </p>
+                  </div>
+                </div>
+                </dd>
+                    <!--铃兰-->
+              <dd>
+                <img src="images/part4_ll.png" class="role_people"/> 
+              
+                <div class="note">
+                  <div class="scroll">
+                    <h4><span>메이벨스</span></h4>
+                    <p>꽃말: 돌아온 행복<br/>
+                      메이벨스와 처음 마주친 사람은 그녀의 천진난만<br/>
+                      함에 이끌리지만, 다른 사람보다 민감한 그녀는 항<br/>
+                      상 주위 사람들을 힘들게 한다.<br/>
+                      과거에 일어난 일로 그녀는 이런 성격을 가지게 되<br/>
+                      었지만, 아무도 그녀의 과거를 모른다.<br/>
+                      그래서인지 메이벨스는 항상 남들에게 상처주는 <br/>
+                      말로 자신의 고독함을 숨긴다.
+                      </p>
                   </div>
                 </div>
               </dd>
+            
                 <!--睡莲-->
               <dd>
-                <img src="images/part4_sl.png" class="role_people"/>
-                <div class="role_name">Nymphaea</div> 
+                <img src="images/part4_sl.png" class="role_people"/> 
+               
                 <div class="note">
                   <div class="scroll">
-                    <h3>Innocence</h3>
-                    <h4><span>Floriography</span></h4>
-                    <p>She stays in water most of the time and she will feel suffocated after leaving the water for loo long.</p>
-                    <p>She seldom meets strangers and knows little about human society and their emotions. She is a slow responser and always strikes with an innocent look.</p>
-                    <p>If you talk with her long enough, you will find that some of her ideas are quite bewildering.\nIt's unclear what is the root cause of her personality, the environment or the low IQ she was born with.</p>
+                    <h4><span>님페이아</span></h4>
+                    <p>꽃말: 순진<br/>대부분의 시간 동안 물속에 잠겨 있으며, 물에서 장시간 떨어진 경우<br/>
+                      장시간 떨어진 경우 질식되는 느낌을 받는다.<br/>
+                      인간과의 접촉을 거의 하지 않으며, 인간 사회 및 <br/>
+                      감정에 대해 잘 모른다. 반박자 느린 성격에 항상 <br/>
+                      순진무구한 표정을 한다.<br/>
+                      그녀와 이야기를 나눈다면, 그녀의 생각이 다른 사<br/>
+                      람과 조금 다르다는 걸 확인할 수 있다.<br/>
+                      환경의 영향을 받은건지 선천적으로 지능이 부족<br/>
+                      한지는 아직 모른다.
+                      </p>
                   </div>
                 </div>
               </dd>
-               <!--山茶-->
+              <!--山茶cuowu-->
               <dd>
-                <img src="images/part4_sc.png" class="role_people"/>
-                <div class="role_name">Camellia</div> 
+                <img src="images/part4_sc.png" class="role_people"/> 
+          
                 <div class="note">
                   <div class="scroll">
-                    <h3>Modest</h3>
-                    <h4><span>Floriography</span></h4>
-                    <p>Camellia looks elegant and respectable just by standing there.</p>
-                    <p> Her noble and moderate manners show her to be a well educated lady.</p>
-                    <p>Many people are easily fooled by her appearance, thinking she must be too spoiled to get along with commoners. This upsets her quite a lot.\nBut sometimes, her meticulous and rigid attitude do cause stress. </p>
+                    <h4><span>카멜리아</span></h4>
+                    <p>꽃말：양보<br/>
+                      아무것도 하지 않아도 카멜리아는 도도하고 우아한 느낌을 준다.<br/>
+                      우아한 말투와 귀족의 예절은 그녀가 교양있는 아가씨라는 것을 증명한다.<br/>
+                      많은 사람이 그녀의 외모 때문에 다가가기 어려울 것으로 생각해 카멜리아는 매우 고민이다.<br/>
+                      하지만, 그녀의 조심스러운 성격과 매사 신중한 태도는 다소 부담되기도 한다.
+                      </p>
                   </div>
                 </div>
               </dd>
-                <!--刺桐-->
+                  <!--刺桐-->
               <dd>
-                <img src="images/part4_ct.png" class="role_people"/>
-                <div class="role_name">Erythrina</div> 
+                <img src="images/part4_ct.png" class="role_people"/> 
+       
                 <div class="note">
                   <div class="scroll">
-                    <h3>Unyielding</h3>
-                    <h4><span>Floriography</span></h4>
-                    <p>She may be quiet, but her very presence draws people's respect.</p>
-                    <p>The mystery surrounding her comes from her unusual grasp of time. In the eyes of Tiger's Claw, the abstract of time becomes a [silky substance].</p>
-                    <p>She doesn't know how she got this power, probably because the Cabala ancients used to use her to count time.</p>
+                    <h4><span>에리스리나</span></h4>
+                    <p>꽃말: 불굴의 의지<br/>
+                      말수가 적은 소녀, 하지만 주변 사람이 그녀를 존<br/>
+                      경하게끔 만든다.<br/>
+                      이런 신비한 느낌은 그녀만의 시간 감지 능력에서 <br/>
+                      비롯되었다. 추상적인 시간이 그녀 눈에서는 「실<br/>
+                      크처럼 화려한 질감」으로 보인다.<br/>
+                      언제부터 이런 능력을 가졌는지는 모르지만, 카발<br/>
+                      라의 선조들이 에리스리나로 시간을 측정해서 영향을<br/>
+                      향을 받은 것으로 보인다.
+                      
+                      </p>
+                  </div>
+                </div>
+              <dd>
+                <!--紫阳花-->
+                <img src="images/part4_zyh.png" class="role_people"/> 
+            
+                <div class="note">
+                  <div class="scroll">
+                    <h4><span>수국</span></h4>
+                    <p>
+                      꽃말: 변화무쌍<br/>
+                      순진하게 생긴 외모는 그녀의 특성과 매우 어울린<br/>
+                      다. 귀여운 외모로 많은 인기를 자랑한다.<br/>
+                      수국은 엄청난 호기심으로 장난치는 것을 좋아하<br/>
+                      며 키는 작지만 폭파전문가이다.<br/>
+                      힘든 일이 닥쳐도 웃는 얼굴로 해결하며 약한면을<br/>
+                      드러내지 않는다.
+                      </p>
                   </div>
                 </div>
               </dd>
-                <!--并蒂莲-->
+              <!--金盏花-->
               <dd>
-                <img src="images/part4_bdl.png" class="role_people"/>
-                <div class="role_name">Twin Lotus</div> 
+                <img src="images/part4_jzh.png" class="role_people"/> 
+              
                 <div class="note">
                   <div class="scroll">
-                    <h3>Syngenesis</h3>
-                    <h4><span>Floriography</span></h4>
-                    <p>A rarely seen Twin Lotus in the form of two girls. The elder one is called Melodia, the younger one Accompania.</p>
-                    <p>Though they are twins, they have developed distinct personalities.</p>
-                    <p>One is gentle and quiet, while the other is chirpy and unruly.</p>
-                    <p>They always appear as witches, carrying their valued music instrument that [they will protect with their lives].</p>
+                    <h4><span>메리골드</span></h4>
+                    <p>꽃말: 매서운 겨울<br/>
+                      겨울날 첫눈이 내린 후 피는 꽃. 추위에 강해서 눈<br/>
+                      이 와도 꽃을 피울 수 있다.<br/>
+                      바람에 흩날리는 눈꽃과 같이 생겼다
+                      </p>
                   </div>
                 </div>
               </dd>
-               <!--金盏花-->
+                <!--月见草-->
               <dd>
-                <img src="images/part4_jzh.png" class="role_people"/>
-                <div class="role_name">Marigold</div> 
+                <img src="images/part4_yjc.png" class="role_people"/> 
+               
                 <div class="note">
                   <div class="scroll">
-                    <h3>Departure</h3>
-                    <h4><span>Floriography</span></h4>
-                    <p>She always carries a tint of sorrow on her face. You can see sadness lingering in her eyes.</p>
-                    <p>Marigold is pessimistic about everything. She also suffers from bad luck, it always rains when she goes out but the sun comes out as soon as she returned home.</p>
-                    <p>It's hard to say whether her pessimism has shaped her life or if her life has made her pessimistic.\n[Anyway, this is life] </p>
-                  </div>
-                </div>
-              </dd>
-                 <!--月见草-->
-              <dd>
-                <img src="images/part4_yjc.png" class="role_people"/>
-                <div class="role_name">Primrose</div> 
-                <div class="note">
-                  <div class="scroll">
-                    <h3>Uninhibited Heart</h3>
-                    <h4><span>Floriography</span></h4>
-                    <p>Quiet and distant, like the cirrocumulus cloud.
-                    <p>Primrose has a tender and thoughtful heart, but she is very hesitant in front of opportunities, and now she has totally given up on them.</p>
-                    <p>[You may take the opportunity, but you can't guarantee the result]</p>
-                    <p>[If I don't open the box, I won't get hurt from what's inside]</p>
-                    <p>Even if she met someone she really likes, she would still be hesitating and eventually resort to silence.</p>
+                    <h4><span>프림로즈</span></h4>
+                    <p>꽃말: 가둘 수 없는 마음<br/>
+                      하늘 멀리 떠다니는 구름처럼.<br/>
+                      프림로즈는 상냥하고 사려 깊은 마음을 가졌지만, <br/>
+                      망설이는 성격에 많은 기회를 놓쳤다. 이제 그녀는  <br/>
+                      목표를 향해 나아가려는 마음조차 접었다.<br/>
+                      [어차피 결과를 장담할 수 없잖아.]<br/>
+                      [상자를 열지 않으면, 상자에 있는 것에 상처받지 <br/>
+                      않을 거야.]<br/>
+                      그녀가 정말 좋아하는 사람을 만났다고 해도, 그<br/>
+                      녀는 망설이다가 결국 침묵을 선택할 것이다.
+                      </p>
                   </div>
                 </div>
               </dd>
             </dl>
-          </div>
+            </div>
+        </div>
+    </div> 
+    <!--part_videomain-->
+      <div class="swiper-slide slide9"  data-hash="slide09">
+        <div class="main_show">
+              <div class="part9_video_title  ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.35s"><img src="images/part9_title.png"></div>
+              <div  class="item ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.45s">
+                  <ul >  
+                    <li><a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part9_video_01.png"></a></li>
+                    <li><a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part9_video_02.png"></a></li>
+                  </ul>
+                  <ul >  
+                    <li><a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part9_video_01.png"></a></li>
+                    <li><a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part9_video_02.png"></a></li>
+                  </ul>
+                  <ul>
+                    <li><a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part9_video_03.png"></a></li>
+                    <li><a class="videoBtn  video1" href="http://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part9_video_03.png"></a></li>            
+                  </ul>
+              </div>
+              <div class="footer_links ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.55s">
+                    <div class="footer_link">
+                    <a href="#" target="_blank"><img src="images/footer_03.png"></a>
+                    <a  href="#" target="_blank"><img src="images/footer_04.png"></a>
+                    <a  href="#" target="_blank"><img src="images/footer_05.png"></a>
+                    <a  href="#" target="_blank"><img src="images/footer_06.png"></a>
+                    
+                </div>
+                <div class="footer_bq">
+                  <P><img src="images/footer_09.png"></P>
+              </div>
+              </div>
         </div>
       </div>
     </div>
-    <!--part5-->
-    <div class="swiper-slide slide5" data-hash="slide05">
-      <div class="page05_bg">
-        <div class="main_world_bg">
-          <div class="main">
-            <div class="part5_title"><h3><span>THE WORLD</span></h3></div>
-            <div class="section section1">
-              <div class="swiper-container infoList scale swiper-container-horizontal">
-                <ul class="swiper-wrapper info-wrap">
-                  <li class="swiper-slide info_item swiper-slide-active">
-                    <div class="point plt"></div>
-                    <div class="point plb"></div>
-                    <div class="point prt"></div>
-                    <div class="point prb"></div>
-                    <div class="qb_img"><img src="images/part5_img1.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(1)"></div>
-                  </li>
-                  <li class="swiper-slide info_item swiper-slide-next">
-                    <div class="point plt"></div>
-                    <div class="point plb"></div>
-                    <div class="point prt"></div>
-                    <div class="point prb"></div>
-                    <div class="qb_img"><img src="images/part5_img2.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(2)"></div>
-                  </li>
-                  <li class="swiper-slide info_item">
-                    <div class="point plt"></div>
-                    <div class="point plb"></div>
-                    <div class="point prt"></div>
-                    <div class="point prb"></div>
-                    <div class="qb_img"><img src="images/part5_img3.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(3)"></div>
-                  </li>
-                  <li class="swiper-slide info_item">
-                    <div class="point plt"></div>
-                    <div class="point plb"></div>
-                    <div class="point prt"></div>
-                    <div class="point prb"></div>
-                    <div class="qb_img"><img src="images/part5_img4.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(4)"></div>
-                  </li>
-                  <li class="swiper-slide info_item">
-                    <div class="point plt"></div>
-                    <div class="point plb"></div>
-                    <div class="point prt"></div>
-                    <div class="point prb"></div>
-                    <div class="qb_img"><img src="images/part5_img5.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(5)"></div>
-                  </li>
-                  <li class="swiper-slide info_item swiper-slide-active">
-                    <div class="point plt"></div>
-                    <div class="point plb"></div>
-                    <div class="point prt"></div>
-                    <div class="point prb"></div>
-                    <div class="qb_img"><img src="images/part5_img6.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(6)"></div>
-                  </li>
-                  <li class="swiper-slide info_item swiper-slide-next">
-                    <div class="point plt"></div>
-                    <div class="point plb"></div>
-                    <div class="point prt"></div>
-                    <div class="point prb"></div>
-                    <div class="qb_img"><img src="images/part5_img7.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(7)"></div>
-                  </li>
-                  <li class="swiper-slide info_item swiper-slide-next">
-                    <div class="point plt"></div>
-                    <div class="point plb"></div>
-                    <div class="point prt"></div>
-                    <div class="point prb"></div>
-                    <div class="qb_img"><img src="images/part5_img8.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(8)"></div>
-                  </li>
-                  <li class="swiper-slide info_item swiper-slide-next">
-                    <div class="point plt"></div>
-                    <div class="point plb"></div>
-                    <div class="point prt"></div>
-                    <div class="point prb"></div>
-                    <div class="qb_img"><img src="images/part5_img9.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(9)"></div>
-                  </li>
-                  <li class="swiper-slide info_item swiper-slide-next">
-                    <div class="point plt"></div>
-                    <div class="point plb"></div>
-                    <div class="point prt"></div>
-                    <div class="point prb"></div>
-                    <div class="qb_img"><img src="images/part5_img10.jpg" alt="" style="width:100%" onclick="openModal();currentSlide(10)"></div>
-                  </li>
-                  
-            
-                </ul>
-                <div class="swiper-scrollbar info_bar"><div class="swiper-scrollbar-drag" style="width: 438.785px;"></div></div>
-                <div class="info_prev2 swiper-button-disabled"><img src="images/part5_next.png" alt="prev"></div>
-                <div class="info_next2"><img src="images/part5_prev.png" alt="prev"></div>
-              </div>
-              <div class="info_prev disabled"></div>
-              <div class="info_next"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--part6-->
-    <div class="swiper-slide slide6" data-hash="slide06">
-        <div class="page06_bg">
-          <div class="mainShow1">
-            <div id="certify">
-              <div class="swiper-container">
-                  <div class="swiper-wrapper">
-                      <div class="swiper-slide"><img src="images/part6_banner1.jpg" /><div class="hui_bg"></div></div>
-                      <div class="swiper-slide"><img src="images/part6_banner2.jpg" /><div class="hui_bg"></div></div>
-                      <div class="swiper-slide"><img src="images/part6_banner3.jpg" /><div class="hui_bg"></div></div>
-                      <div class="swiper-slide"><img src="images/part6_banner4.jpg" /><div class="hui_bg"></div></div>
-                      <div class="swiper-slide"><img src="images/part6_banner5.jpg" /><div class="hui_bg"></div></div>
-                  </div>
-                  
-              </div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-          </div>        
-        </div>
-     </div>
-  </div>
-</div>
-<script src="js/jquery.min.js"></script>
-<script src="js/devicerem.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/qiehuan.js"></script>
-<script>
-/*主体滚动js*/
-
-
-var swiper1 = new Swiper('.swiper-fullscreen', {
-  direction: 'vertical',
-  slidesPerView: 'auto',
-  mousewheel: true,
-  // hashNavigation: true,
-
-   //~~~~~解决 手机上横向滑动的时候出现卡顿的bug  start~~~~~~~~
-    observer: true,                  //修改swiper自己或子元素时，自动初始化swiper
-        observeParents: true,            //修改swiper的父元素时，自动初始化swiper
-        touchRatio: 1,                   //解决滑动卡顿
-        longSwipesRatio:0.1,
-        threshold: 10,                   //如果触摸距离小于该值滑块不会被拖动
-        followFinger:false,  
-        preventLinksPropagation: false,   // 阻止点击事件冒泡
-});
-
-$('.characters').click(function(){
-    swiper1.slideTo(2);
-});
-
-$('.home').click(function(){
-    swiper1.slideTo(0);
-});
-$('.flower').click(function(){
-    swiper1.slideTo(3);
-});
-
-$('.shots').click(function(){
-    swiper1.slideTo(4);
-});
-
-$('.features').click(function(){
-    swiper1.slideTo(5);
-});
-/*part3--role*/
-var roleswiper = new Swiper('.roles_wrap', {
-    loop : true,
-    effect : 'fade',
-    initialSlide:2,
-    on:{
-      slideChangeTransitionStart:function(roleswiper){
-        var length = $(".game_roles .swiper_dock_list li").length;
-        $(".game_roles .swiper_dock_list li img").removeClass('on');
-        $(".game_roles .swiper_dock_list li img").eq((this.activeIndex-1)%length).addClass('on');
-      }
-    },
    
-});
-$(".game_roles .swiper_dock_list li").click(function(){
-    var index = $(this).index()+1;
-    roleswiper.slideTo(index);
-    $(".game_roles .swiper_dock_list li img").removeClass('on');
-    $(".game_roles .swiper_dock_list li img").eq(index-1).addClass('on');
-});
-/*part4--hualingzong*/
-var list = new Swiper('.part4_swiper',{
-        loop:true, initialSlide: 6,
-        slideToClickedSlide: true,
-        slidesPerView: 4,
-        freeMode: true,watchSlidesProgress: true,
-        navigation: {
-          nextEl: '.role .list .swiper-button-next',
-          prevEl: '.role .list .swiper-button-prev',
-	},
-  on: {
-    resize: function () {
-            setTimeout(function(){
-              list.update()
-            },500)
-            
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/swiper.animate1.0.3.min.js"></script>
+  <script src="js/qiehuan.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/jquery.colorbox.js"></script>
+  <script>
+  /*全屏*/
+  var Mainswiper = new Swiper('.swiper-fullscreen', {
+    direction: 'vertical',
+      mousewheel: true,
+      pagination: {
+        el: '.swiper-pagination .pages',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">0' + (index + 1) + '</span>';
+        },
       },
-    slideChangeTransitionEnd:function(swiper1){ 
-         var index = this.realIndex;
-           //role.slideTo(swiper1.realIndex);
-         $('.role .content dd').eq(index).fadeIn().siblings().hide();
-           var dd = $('.role .content dd').eq(index);
-         //  console.log(dd.length)
-              $('.role .content dd').hide()
-              dd.show();
-            //  dd.find('.role_name').addClass('animated fadeInDown');
-            //  dd.find('.role_people').addClass('animated fadeInUp');
-            //  dd.find('.note').addClass('animated fadeInRight');
-         },
-       },
+      on: {
+        init: function () {
+          swiperAnimateCache(this); //隐藏动画元素 
+          swiperAnimate(this); //初始化完成开始动画
+        },
+        slideChangeTransitionEnd: function () {
+          swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+       
+        },
+      },
 });
- /*part5--theworld*/
-var mySwiper=new Swiper(".infoList",{
-  direction:"horizontal",
+
+
+
+  /*点击连接到对应位置*/
+$('.part1').click(function(){
+  $('.nav_box').removeClass('active');
+  $('this').siblings('div').removeClass('active');
+  $('this').addClass('active');
+  Mainswiper.slideTo(0);
+ 
+});
+
+$('.part2,.part1_btn,.part3_regitster').click(function(){
+
+  Mainswiper.slideTo(1);
+  $('.nav_box').removeClass('active');
   
-  wrapperClass:"info-wrap",
-  slideClass:"info_item",
-  slidesOffsetBefore : -100,
-  slidesOffsetAfter : 220,
-  navigation: {
-    nextEl: ".info_next2",
-    prevEl: ".info_prev2",
-  },
-  autoplay: {
-    delay:2000,
-    stopOnLastSlide: false,
-    disableOnInteraction: true,
-    },
-  scrollbar: {
-    el: ".info_bar",
-    // hide: true,
-    dragSize: 189,
-  },
-  scrollbarHide:!1,
-  scrollbarDraggable:!0,
-  simulateTouch:!1,
-  initialSlide:0,
-  slidesPerView:5,
-  mousewheelControl:!0,
+  $('this').addClass('active');
+});
+$('.part3').click(function(){
+  Mainswiper.slideTo(2);
+  $('.nav_box').removeClass('active');
+  $('this').addClass('active');
+});
 
-  speed:800,roundLengths:!0,
-  preventClicks:!1,onInit:function(){
-      $(".info_prev").addClass("disabled")
-  }
-  ,onSlideChangeStart:function(){
-      $(".info_prev2").hasClass("swiper-button-disabled")?$(".info_prev").addClass("disabled"):$(".info_prev").removeClass("disabled"),
-      $(".info_next2").hasClass("swiper-button-disabled")?$(".info_next").addClass("disabled"):$(".info_next").removeClass("disabled")
-  },
-}
-);
-$(".section1").on("click",".info_prev",function(){
-$(".info_prev2").click()
-}
-).on("click",".info_next",function(){
-$(".info_next2").click()
-}
-)
- /*part6-3dlunbo */  
-var certifySwiper = new Swiper('#certify .swiper-container', {
-	watchSlidesProgress: true,
-  effect : 'coverflow',
-  coverflowEffect: {
-          rotate: 20,
-          stretch: 0,
-          depth: 30,
-          modifier: 1,
-          slideShadows: true,
-     },
-	slidesPerView: 'auto',  spaceBetween:0,
-	centeredSlides: true,
-loop: true,
-	loopedSlides: 3,
-autoplay: true,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	pagination: {
-		el: '.swiper-pagination',
-		clickable :true,
-	},
-	on: {
-    resize: function () {
-            setTimeout(function(){
-              certifySwiper.update()
-            },500)
-            
-     },
-		progress: function(progress) {
-			for (i = 0; i < this.slides.length; i++) {
-				var slide = this.slides.eq(i);
-				var slideProgress = this.slides[i].progress;
-				modify = 1;
-				if (Math.abs(slideProgress) > 1) {
-					modify = (Math.abs(slideProgress) - 1) * 0.5 + 1;
-				}
-				translate = slideProgress * modify *8.6 + 'rem';
-				scale = 1 - Math.abs(slideProgress) / 5;
-				zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
-				slide.transform('translateX(' + translate + ') scale(' + scale + ')');
-				slide.css('zIndex', zIndex);
-				slide.css('opacity', 1);
-				if (Math.abs(slideProgress) > 3) {
-					slide.css('opacity', 0);
-				}
-			}
-		},
-		setTransition: function(transition) {
-			for (var i = 0; i < this.slides.length; i++) {
-				var slide = this.slides.eq(i)
-				slide.transition(transition);
-			}
+$('.part5').click(function(){
+  Mainswiper.slideTo(4);
+  $('.nav_box').removeClass('active');
+  $('this').addClass('active');
+ 
+});
+$('.part9').click(function(){
+  Mainswiper.slideTo(8);
+  $('.nav_box').removeClass('active');
+  $('this').addClass('active');
+ 
+});
 
-		}
-	}
 
+$('.tc_msg_bg_wrap .closed').click(function(){
+  $('.tc_msg_bg_wrap').css('display','none');
 })
+$('.tc_text_tip_wrap .closed').click(function(){
+  $('.tc_text_tip_wrap').css('display','none');
+})
+$('.tc_success_big .closed').click(function(){
+  $('.tc_success_big').css('display','none');
+})
+     /*part4--花灵*/ 
+var flowerswiper = new Swiper('.part8_swiper',{
+    loop:true, initialSlide: 6,
+    slideToClickedSlide: true,
+    slidesPerView: 4,
+    freeMode: true,watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.part8_menu  .swiper-button-next',
+      prevEl: '.part8_menu .swiper-button-prev',
+},
+on: {
+  resize: function () {
+          setTimeout(function(){
+            flowerswiper.update()
+          },500)
+          
+    },
+  slideChangeTransitionEnd:function(flowerswiper){ 
+        var index = this.realIndex;
+          //role.slideTo(swiper1.realIndex);
+        $('.role .content_tro dd').eq(index).fadeIn().siblings().hide();
+          var dd = $('.role .content_tro dd').eq(index);
+        //  console.log(dd.length)
+            $('.role .content_tro dd').hide()
+            dd.show();
+          //  dd.find('.role_name').addClass('animated fadeInDown');
+          //  dd.find('.role_people').addClass('animated fadeInUp');
+          //  dd.find('.note').addClass('animated fadeInRight');
+        },
+      },
+});
+// 特色
+var swiper = new Swiper('.page5_swiper', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    },
+    loop : true,
+    initialSlide :0,
+    navigation: {
+        nextEl: '.page5_swiper .swiper-button-next',
+        prevEl: '.page5_swiper .swiper-button-prev',
+        },
+    nextEl: '.page5_swiper .swiper-button-next',
+    prevEl: '.page5_swiper .swiper-button-prev',
+});
+// 特色
+var swiper = new Swiper('.page7_swiper', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    },
+    loop : true,
+    initialSlide :0,
+    navigation: {
+        nextEl: '.page7_swiper .swiper-button-next',
+        prevEl: '.page7_swiper .swiper-button-prev',
+        },
+    nextEl: '.page7_swiper .swiper-button-next',
+    prevEl: '.page7_swiper .swiper-button-prev',
+});
 
-//     //文字滚动时，禁止全屏滚动
-$(function () {
-    $('.scroll').hover(function () {
-      swiper1.mousewheel.disable();
-    }, function () {
-      swiper1.mousewheel.enable();
+
+    $(function () {
+    
+
+      //文字滚动时，禁止全屏滚动
+      $('.slide3 .scroll').hover(function () {
+        swiper.mousewheel.disable();
+      }, function () {
+        swiper.mousewheel.enable();
+      })
     })
-}) 
-//这个世界弹窗	
+
+    //角色弹窗	
+//角色弹窗	
 function openModal() {
 			document.getElementById('myModal').style.display = "block";
-		}
+      document.getElementById('masked').style.display = "block";
+}
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+  document.getElementById('masked').style.display = "none";
+}
 		
-		function closeModal() {
-			document.getElementById('myModal').style.display = "none";
-		}
-		
-		var slideIndex = 1;
-		showSlides(slideIndex);
-		
-		function plusSlides(n) {
-			showSlides(slideIndex += n);
-		}
-		
-		function currentSlide(n) {
-			showSlides(slideIndex = n);
-		}
-		
-		function showSlides(n) {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-		
-			var captionText = document.getElementById("caption");
-			if (n > slides.length) {slideIndex = 1}
-			if (n < 1) {slideIndex = slides.length}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-		
-			slides[slideIndex-1].style.display = "block";
-			
-		
-		}
-</script>
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex-1].style.display = "block";
+}
+//视频弹窗
+$(function(){
+    $(".video1").colorbox({iframe:true, innerWidth:"80%", innerHeight:"30%"});	
+  })
+   
+  $(function(){
+    $(".video2").colorbox({iframe:true, innerWidth:940, innerHeight:498});	
+  })
+  </script>
 </body>
+
 </html>
