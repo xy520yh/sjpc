@@ -106,6 +106,38 @@ src: url('../font/NEXEN\ TIRE_Regular.ttf'),
  .part1_btn  img{width: 5.52rem;height: 1.18rem;-webkit-animation: magnify .6s linear infinite alternate;	-moz-animation: magnify .6s linear infinite alternate;	animation: magnify .6s linear infinite alternate;}
  .part1_logo img,.part1_solgen img,.part1_video_play img,.part1_btn img,.part1_footer img{width:7.5rem;height:auto;}
 .part1_footer,.part1_down{position:absolute;left:0;width:7.5rem;display: flex; justify-content: center;}
+.part1_btn img,.part3_regitster  img,.part4_hd_btn img{
+
+  -webkit-animation: magnify .6s linear infinite alternate;
+-moz-animation: magnify .6s linear infinite alternate;
+animation: magnify .6s linear infinite alternate;
+}
+
+@-webkit-keyframes magnify {
+  0% {
+  -webkit-transform: scale(0.96);
+}
+100% {
+  -webkit-transform: scale(1);
+}
+}
+@-moz-keyframes magnify {
+  0% {
+  -moz-transform: scale(1);
+}
+100% {
+  -moz-transform: scale(0.96);
+}
+}
+@keyframes magnify {
+  0% {
+  transform: scale(1);
+}
+100% {
+  transform: scale(0.96);
+}
+}
+
 .part1_footer{bottom:0.2rem;}
 .part1_down{bottom: 1.2rem; animation: arrowAn 0.8s infinite;}
 .part1_down img{width:7.5rem;height:1rem;}
@@ -186,7 +218,7 @@ input[type="checkbox"]:checked{background:url(../images/part2_checked.png) no-re
 .part4_hd_solgen{position: absolute;top:0.7rem;left:0;}
 .part_video_img img{width:auto;height:4.4rem;cursor: pointer;}
 .part_video_img0{margin-left: 0.1rem;margin-right: 0.1rem;}
-.part4_bottom{position: absolute;bottom:0.5rem;left:0;}
+.part4_bottom{position: absolute;bottom:0.1rem;left:0;}
 
 .part4_hd_gift img,.part4_hd_text img ,.part4_hd_btn img ,.part4_hd_title img  {width:  7.5rem;height:auto}
 
@@ -237,8 +269,8 @@ input[type="checkbox"]:checked{background:url(../images/part2_checked.png) no-re
 .part7_role_slogen,.part_video_img{display: flex; width:7.5rem; justify-content: center;}
 .part7_role_slogen img {width:7.5rem;height:2.4rem;margin-bottom: 0.2rem;}
 .part7_role_text{font-size:0.24rem;color:#fffdfe;font-family: myFirstFont; display: flex; justify-content: center; width:7.5rem;margin-bottom: 0.2rem; text-align: center;}
-.role_tc_video img{width:2.45rem;height:1.3rem;}
-
+.role_tc_video img{width:2.8rem;height:auto;}
+p.first_text{margin-bottom: 0.2rem;}
 
 /*par8*/
 .part8_solgen{z-index: 1;width: 7.5rem; margin:0 auto; display: flex; justify-content:center; }
@@ -418,14 +450,14 @@ width:100%;height:92%; display: flex; align-items: center; justify-content: cent
 .role_tc_wrap{display:flex;justify-content:center;position:relative}
 .role_right{display:flex;flex-direction:column;position:absolute;top:0.4rem;right:0.3rem;text-align:center;justify-content:center;width:4.8rem;align-items:center;font-weight:bold}
 .role_left{position:absolute;left:-0.4rem;top:-2.3rem;z-index: -1;}
-.role_tc_title h4{height:0.66rem;font-size:0.44rem;justify-content:center;color:#aa9162;align-items:center;margin-bottom:0.2rem;display:flex;font-weight:bold;font-family:myFirstFont}
+.role_tc_title h4{height:0.66rem;font-size:0.44rem;justify-content:center;color:#aa9162;align-items:center;margin-bottom:0.1rem;display:flex;font-weight:bold;font-family:myFirstFont}
 .role_tc_title h4::before,.role_tc_title h4::after{content:'';width:0.66rem;height:0.46rem;background:url(../images/part7_role_tc_title_ico.png);background-size:100% 100%}
 .role_tc_title h4::after{transform:rotate(180deg)}
 .role_tc_title h4 span{margin:0 0.3rem}
 .cboxLoadedContent img{width:9.4rem;height:5rem}
 .swiper-container-horizonta .swiper-slide-active{border:2px solid #f00}
 .role_tc_skill img{width:2.5rem;height:auto;}
-.role_tc_text p{font-size:0.14rem; color: #63626d;font-family:myFirstFont; line-height: 0.3rem;} 
+.role_tc_text p{font-size:0.14rem; color: #63626d;font-family:myFirstFont; line-height: 0.26rem;} 
 
 
 .cursor{cursor:pointer}
@@ -456,6 +488,47 @@ img.hover-shadow{transition:0.3s}
 
 
 
+.sidebar_box .title{font-size: 0.46rem; height:0.2rem;}
+.sidebar_box .title span{font-size: 0.27rem;}
+.sidebar_box textarea{border: 0.01rem solid rgba(22,222,255,1);background: transparent;width:100%;height:60vh;color:#fff;font-size: 0.24rem;padding: 0.15rem 0.20rem;margin-bottom: 0.27rem;}
+.sidebar_box .follow{transition: all 0.3s;border:0;width: 2.16rem;height: 0.66rem;background: url(../images/follow.png) no-repeat center center;font-size:0;background-size: contain;}
+.sidebar_box .follow:hover,.sidebar_box .follow:active{background-image: url(../images/follow_h.png)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*侧边栏目*/
+.sidebar_box{transition:all 0.3s;position:fixed;right:0;top:0;width:3rem;max-width:30%;background:rgba(0,0,0,0.75);height:100%;z-index:11;color:#fff;padding:0.4rem;flex-direction:column;display:flex;justify-content:center;transform:translateX(100%);align-items:center}
+.sidebar_box.active{transform:translateX(0)}
+.sidebar_main{position:relative;font-family:myFirstFont;width:3rem;display:flex;align-items:center;flex-direction:column;justify-content:center;height:80%;text-align:center}
+.sidebar_main h1{position:relative;text-align:center}
+.sidebar_nav{position:relative;display:flex;flex-direction:column;margin-top:0px}
+.sidebar_ico{height:10%;display:flex;justify-content:center;position:absolute;bottom:0}
+.sidebar_ico img{height:0.9rem;margin-right:0.05rem;margin-left:0.05rem;transition:all 0.3s}
+.event,.intro,.community{margin-top:0.2rem}
+.sidebar_main a{color:#fff}
+.sidebar_main h1 img{width:1.59rem;height:1.2rem;text-align:center}
+a.sidebar_title{display:block;color:#fff;text-align:center;overflow:hidden;font-size:0.34rem}
+.intro h4{font-size:0.34rem;height:0.36rem;align-items:center;display:flex;justify-content:center;font-family:myFirstFont;color:#d8e5e4;text-align:left;font-weight:normal}
+.intro h4::before,.intro h4::after{content:'';width:0.29rem;height:0.15rem;background:url(../images/part8_title_smallico.png);background-size:100% 100%}
+.intro h4::after{transform:rotate(180deg)}
+a.sidebar_subtitle{display:block;color:#63626d;font-size:0.28rem;margin-top:0.2rem;overflow:hidden}
+.sidebar_box  .closed{position:absolute;top:0.4rem;left:0.5rem;z-index:15}
+.sidebar_box  .closed img{transition:all 0.3s;width:0.3rem;height:0.3rem}
+.sidebar_box  .closed img:hover{transform:rotate(90deg)}
 
 
 

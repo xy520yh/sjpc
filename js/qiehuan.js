@@ -90,7 +90,18 @@ $('.tc_msg_bg_wrap .closed').click(function(){
 })
 
 
+
+$('body').on("click", '.common_menu', function () {
+  $('.sidebar_box').toggleClass('active')
+});
+$('body').on("click", '.sidebar_box .closed', function () {
+  $('.sidebar_box').removeClass('active')
+});
+
 })
+
+
+
 
 // $(function () {
 //   var bgm = new Audio();
