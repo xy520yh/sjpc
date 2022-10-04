@@ -295,7 +295,7 @@ p.first_text{margin-bottom: 0.2rem;}
 .part8_menu .swiper-button-prev,.part8_menu .swiper-button-next{width:0.49rem;height:0.49rem;font-size:0rem}
 .part8_menu .swiper-button-next:after,.part8_menu .swiper-button-prev:after{font-size:0rem}
 .part8_menu .swiper-button-prev{width:1.2rem;height:1.2rem;background:url(../images/par4_prev.png) no-repeat 0 0;background-size:100% 100%;position:absolute;top:30%;left:0rem;margin-top:-0.19rem}
-.part8_menu .swiper-button-next{width:1.2rem;height:1.2rem;background:url(../images/par4_next.png) no-repeat 0 0;background-size:100% 100%;position:absolute;top:30%;right:0rem;margin-top:-0.19rem}
+.part8_menu .swiper-button-next{width:1.2rem;height:1.2rem;background:url(../images/par4_next.png) no-repeat 0 0;background-size:100% 100%;position:absolute;top:30%;right:-0.05rem;margin-top:-0.19rem}
 .role .list .swiper-slide img{width:1.17rem;height:1.17rem;margin:0 0.23rem}
 .role .list .swiper-slide-active img{transform:scale(1.15);margin-right:0.2rem;filter:drop-shadow(0rem 0rem 0.04rem #949a5b)}
 .role .list .swiper-slide-active::before{content:'';position:absolute;top:0.02rem;left:-0.06rem;width:1.75rem;height:1.75rem;background-size:100% 100%;background-position:center center}
@@ -308,7 +308,7 @@ p.first_text{margin-bottom: 0.2rem;}
 
 
 
-.note{width:4rem;height:4.57rem;color:#d8e5e4;font-size: 0.18rem;background:url(../images/part8_text_bg.png); background-size: 100% 100%; z-index: 6;
+.note{width:3rem;height:4.57rem;color:#d8e5e4;font-size: 0.18rem;background:url(../images/part8_text_bg.png); background-size: 100% 100%; z-index: 6;
      padding-top: 0.2rem;text-align: center; position: absolute;
      left: 0.3rem;
      bottom: 4rem;}

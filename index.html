@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="css/swiper.min.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet">
   <link href="css/common.css" rel="stylesheet">
@@ -688,6 +688,7 @@
   <script src="js/qiehuan.js"></script>
   <script src="js/input.js"></script>
   <script src="js/jquery.colorbox.js"></script>
+  
   <script>
   /*全屏*/
   var Mainswiper = new Swiper('.swiper-fullscreen', {
@@ -841,6 +842,14 @@ on: {
         },
       },
 });
+//文字滚动时，禁止全屏滚动
+$(function () {
+    $('.scroll').hover(function () {
+      Mainswiper.mousewheel.disable();
+    }, function () {
+      Mainswiper.mousewheel.enable();
+    })
+}) 
 // 特色
 var swiper = new Swiper('.page5_swiper', {
     effect: 'coverflow',
@@ -881,18 +890,6 @@ var swiper = new Swiper('.page7_swiper', {
 });
 
 
-    $(function () {
-    
-
-      //文字滚动时，禁止全屏滚动
-      $('.slide3 .scroll').hover(function () {
-        swiper.mousewheel.disable();
-      }, function () {
-        swiper.mousewheel.enable();
-      })
-    })
-
-    //角色弹窗	
 //角色弹窗	
 function openModal() {
 			document.getElementById('myModal').style.display = "block";
