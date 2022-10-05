@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="css/swiper.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet">
   <link href="css/common.css" rel="stylesheet">
   <link href="css/colorbox.css" rel="stylesheet">
   <link rel="shortcut icon" href="images/favicon.ico"/>
@@ -209,7 +208,7 @@
   <!--主体内容--> 
 
         <!--part1-->
-      <div class="part slide1" data-hash="slide01">
+      <div class="part slide1" id="pro1">
         <div class="main_show">
           <video x5-video-player-type="h5-page" x5-playsinline="true" webkit-playsinline playsinline muted autoplay loop class="bgvideo video bg-video">
             <source src="media/main.mp4" type="video/mp4">
@@ -221,14 +220,14 @@
               <div class="part1_video_btn" >
                 <a class="part1_video_play video1 " id="playbtn" href="https://www.youtube.com/embed/thf3JNxwpdU/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22"><div><span></span></div></a> 
               </div>
-              <div class="part1_btn ani"  ><img src="images/part1_btn.png"></div>
+              <div class="part1_btn "  ><img src="images/part1_btn.png"></div>
               <div class="part1_down"><img src="images/part1_down.png"></div>
               <div class="part1_footer"><img src="images/part1_footer.png"></div>
           </div>
  
       </div>
         <!--part2-->
-      <div class="part slide2" data-hash="slide02">
+      <div class="part slide2" id="pro2">
         <div class="main_show">
           <div class="part2_register_slogen"><img src="images/part2_regitster_solgen.png"></div>
             <div class="register_left_bottom">
@@ -270,24 +269,24 @@
         </div>
       </div>
         <!--part3-->
-      <div class="part slide3" data-hash="slide03">
+      <div class="part slide3"  id="pro3">
         <div class="main_show">
           <div class="part3_top">
-            <div class="part3_slogen ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="images/part3_sologen.png"></div>
-            <div class="part3_title ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="images/part3_title1.png"></div>
+            <div class="part3_slogen"><img src="images/part3_sologen.png"></div>
+            <div class="part3_title"><img src="images/part3_title1.png"></div>
           </div>
           <div class="part3_dc">
               <div class="dc_bg">
-                <div class="dc_20_hover dc ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.35s"></div>
-                <div class=" dc_50_hover dc ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.45s"></div>
-                <div class=" dc_70_hover dc ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.55s"></div>
+                <div class="dc_20_hover dc" ></div>
+                <div class=" dc_50_hover dc"></div>
+                <div class=" dc_70_hover dc" ></div>
               </div>
               <div class="dc_bg1">
-                <div class=" dc_100_hover dc ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.65s"> </div>
-                <div class=" dc_150_hover dc ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.75s"></div> 
+                <div class=" dc_100_hover dc"> </div>
+                <div class=" dc_150_hover dc" ></div> 
               </div>
-              <div  class="part3_regitster ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.85s"><a href="javascript:void()"><img src="images/part3_btn.png"></a></div>   
-              <div  class="part3_tip ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.95s">
+              <div  class="part3_regitster"><a href="javascript:void()"><img src="images/part3_btn.png"></a></div>   
+              <div  class="part3_tip">
                 <img src="images/part3_tip.png">
                 <!-- <P>*해당 이벤트는 사전예약 완료 대상자 모두에게 지급됩니다.</P>
                 <P>*보상 이미지는 추후 변경 될 수 있습니다.</P> -->
@@ -296,7 +295,7 @@
       </div>  
      </div>
        <!--part4-->
-      <div class="part  slide4">
+      <div class="part  slide4"  id="pro4">
         <div class="main_show">
           <div class="part4_hd_solgen" ><img src="images/part4_hd_solgen.png"></div>
           <div class="part4_bottom">
@@ -308,12 +307,12 @@
       </div>  
       </div>
         <!--part5-->
-      <div class="part slide5" data-hash="slide05">  
+      <div class="part slide5"  id="pro5">  
         <div class="main_show">
        
-          <div class="part5_video_slogen ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="images/part5_video_title.png"></div>
+          <div class="part5_video_slogen"><img src="images/part5_video_title.png"></div>
         
-              <div class="main_center  ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+              <div class="main_center">
                 <div class="swiper-container page5_swiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -337,37 +336,37 @@
          
           
                 <!-- <div class="part_video_img">
-                  <div class="part_video_img1 part_video_img0 ani" style="margin-right:0.1rem" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.35s" swiper-animate-delay="0.3s"><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img1.png"></a></div>
-                  <div class="part_video_img2 part_video_img0 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.45s"><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img2.png"></a></div>
-                  <div class="part_video_img3 part_video_img0 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.55s"><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img3.png"></a></div>
-                  <div class="part_video_img4 part_video_img0 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.65s"><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img4.png"></a></div>
+                  <div class="part_video_img1 part_video_img0 " style="margin-right:0.1rem" swiper-mate-effect="fadeInDown" swiper-mate-duration="0.35s" swiper-mate-delay="0.3s"><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img1.png"></a></div>
+                  <div class="part_video_img2 part_video_img0 " swiper-mate-effect="fadeInDown" swiper-mate-duration="0.5s" swiper-mate-delay="0.45s"><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img2.png"></a></div>
+                  <div class="part_video_img3 part_video_img0 " swiper-mate-effect="fadeInDown" swiper-mate-duration="0.5s" swiper-mate-delay="0.55s"><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img3.png"></a></div>
+                  <div class="part_video_img4 part_video_img0 " swiper-mate-effect="fadeInDown" swiper-mate-duration="0.5s" swiper-mate-delay="0.65s"><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part5_video_img4.png"></a></div>
                 </div> -->
               </div>
       </div> 
         <!--part6-->    
-      <div class="part slide6 " data-hash="slide06"  > 
+      <div class="part slide6 "    id="pro6"> 
         <div class="main_show">
-            <div class="part6_introduction_title ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.25s"><img src="images/part6_introduction_title.png"></div>
-            <div  class="part_introduction_text ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.25s">
-                <div class="ani part_introduction_text_btn" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5S" swiper-animate-delay="0.55s">
+            <div class="part6_introduction_title"><img src="images/part6_introduction_title.png"></div>
+            <div  class="part_introduction_text">
+                <div class=" part_introduction_text_btn">
                   <a class="part_introduction_text_btn_play video1" id="playbtn" href="https://www.youtube.com/embed/thf3JNxwpdU/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22"><div><span></span></div></a> 
                 </div>
               </div> 
         </div>  
       </div>
       <!--part7 role_masked-->
-      <div class="part slide7" data-hash="slide07" >
+      <div class="part slide7"  id="pro7">
         <div class="main_show">
           <video x5-video-player-type="h5-page" x5-playsinline="true" webkit-playsinline playsinline muted autoplay loop class="bg-video video">
             <source src="media/part6_video.mp4" type="video/mp4">
         </video> 
          
           <div class="part7_top">
-            <div class="part7_role_slogen ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.25s"><img src="images/part7_role_img_03_title.png"></div>
-            <div class="part7_role_text ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><p>수시로 직업 전환이 되는 멀티 직업 시스템, <br/>
+            <div class="part7_role_slogen"><img src="images/part7_role_img_03_title.png"></div>
+            <div class="part7_role_text" ><p>수시로 직업 전환이 되는 멀티 직업 시스템, <br/>
               또다른 자유도를 안겨드립니다.</p></div>
          </div>
-          <div class="main_center  ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" >
+          <div class="main_center">
             <div class="swiper-container page7_swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><a onclick="openModal();currentSlide(1)" ><img src="images/part7_role_img_01.png" data-url="#"> </a></div>
@@ -385,10 +384,10 @@
               <div class="part_video_left">
               
                 <div class="part_video_img">
-                <div class="part_video_img1 ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.35s"><a onclick="openModal();currentSlide(1)" ><img src="images/part7_role_img_01.png"></a></div>
-                <div class="part5_video_img2 ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.45s"><a  onclick="openModal();currentSlide(2)" ><img src="images/part7_role_img_02.png"></a></div>
-                <div class="part_video_img3 ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.55s"><a onclick="openModal();currentSlide(3)" ><img src="images/part7_role_img_03.png"></a></div>
-                <div class="part_video_img4 ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.65s"><a  onclick="openModal();currentSlide(4)" ><img src="images/part7_role_img_04.png"></a></div>
+                <div class="part_video_img1 "  swiper-mate-effect="fadeInLeft" swiper-mate-duration="0.5s" swiper-mate-delay="0.35s"><a onclick="openModal();currentSlide(1)" ><img src="images/part7_role_img_01.png"></a></div>
+                <div class="part5_video_img2 "  swiper-mate-effect="fadeInLeft" swiper-mate-duration="0.5s" swiper-mate-delay="0.45s"><a  onclick="openModal();currentSlide(2)" ><img src="images/part7_role_img_02.png"></a></div>
+                <div class="part_video_img3 "  swiper-mate-effect="fadeInLeft" swiper-mate-duration="0.5s" swiper-mate-delay="0.55s"><a onclick="openModal();currentSlide(3)" ><img src="images/part7_role_img_03.png"></a></div>
+                <div class="part_video_img4 "  swiper-mate-effect="fadeInLeft" swiper-mate-duration="0.5s" swiper-mate-delay="0.65s"><a  onclick="openModal();currentSlide(4)" ><img src="images/part7_role_img_04.png"></a></div>
               </div>
               </div>
             </div>
@@ -396,7 +395,7 @@
         </div>
       </div>
         <!--part8_role_Character-->
-      <div class="part slide8" data-hash="slide08" > 
+      <div class="part slide8"  id="pro8" > 
           <div class="main_show">
             <div class="part8_top">
               <div class="part8_solgen"><img src="images/part8_solgen.png"></div> 
@@ -439,15 +438,9 @@
                     <p>꽃말: 공생<br/>
                       매우 희귀한 트위 로터스. 언니 멜로디아와 동생<br/>
                       반주가 함께 나타난다.<br/>
-                      일심동체 쌍둥이 자매지만 인류와 생활하면서 다<br/>
-                      른 성격으로 성장했다.<br/>
-                      한 명은 귀여운 외모와 조용한 성격으로, 다른 한<br/>
-                      명은 활발한 성격을 가지고 있다.<br/>
-                      마녀 형상으로 사람앞에 나타나며, 항상 가지고 다<br/>
-                      니는 악기는 "목숨을 바쳐서라도 수호해야 할 물건<br/>
-                      "이다.
-                    
-                      </p>
+                      일심동체 쌍둥이 자매지만 인류와 생활하면서 다른 성격으로 성장했다.<br/>
+                      한 명은 귀여운 외모와 조용한 성격으로, 다른 한 명은 활발한 성격을 가지고 있다.<br/>
+                      마녀 형상으로 사람앞에 나타나며, 항상 가지고 다니는 악기는 "목숨을 바쳐서라도 수호해야 할 물건"이다.</p>
                     
                   
                   </div>
@@ -466,8 +459,7 @@
                       <p>꽃말: 결점<br/>「그 사건」 이후, 자신의 감정 버튼을 <br/>
                         꺼버렸다.<br/>
                         몸과 마음속에 복수의 그림을 숨기고, 모든 감정을 <br/>
-                        갑옷속에 숨겨 복수만을 위해 살아가는 소녀다. 인<br/>
-                        류의 숙청이 그녀의 유일한 소원이다.<br/>
+                        갑옷속에 숨겨 복수만을 위해 살아가는 소녀다. 인류의 숙청이 그녀의 유일한 소원이다.<br/>
                         체스트넛 로즈의 꽃 모양처럼, 결점이 있는 물건에<br/>
                         집착스러운 모습을 보인다.
                         </p>
@@ -483,9 +475,9 @@
              
                 <div class="note">
                   <div class="scroll">
-                    <h4><span>정령 시스템</span></h4>
+                    <h4><span>발론</span></h4>
                     <p>꽃말: 절망의 사랑<br>
-                      발론은 정말 믿을만한 동료이다. <br> 하지만 자신의 생각을 말하는 것을 좋아하지 않아. <br>말수가 적다.<br> 발론은 충성이 정의보다 중요하다고 생각하며, <br>명령에 무조건 복종한다.<br>
+                      발론은 정말 믿을만한 동료이다.<br>하지만 자신의 생각을 말하는 것을 좋아하지 않아 말수가 적다.<br>발론은 충성이 정의보다 중요하다고 생각하며,<br>명령에 무조건 복종한다.<br>
                       사람들이 흔히 말하는 선과 악은 버린지 오래다. </p>
                   </div>
                 </div>
@@ -501,11 +493,8 @@
                   <div class="scroll">
                     <h4><span>메이벨스</span></h4>
                     <p>꽃말: 돌아온 행복<br/>
-                      메이벨스와 처음 마주친 사람은 그녀의 천진난만<br/>
-                      함에 이끌리지만, 다른 사람보다 민감한 그녀는 항<br/>
-                      상 주위 사람들을 힘들게 한다.<br/>
-                      과거에 일어난 일로 그녀는 이런 성격을 가지게 되<br/>
-                      었지만, 아무도 그녀의 과거를 모른다.<br/>
+                      메이벨스와 처음 마주친 사람은 그녀의 천진난만함에 이끌리지만, 다른 사람보다 민감한 그녀는 항상 주위 사람들을 힘들게 한다.<br/>
+                      과거에 일어난 일로 그녀는 이런 성격을 가지게 되었지만, 아무도 그녀의 과거를 모른다.<br/>
                       그래서인지 메이벨스는 항상 남들에게 상처주는 <br/>
                       말로 자신의 고독함을 숨긴다.
                       </p>
@@ -527,10 +516,8 @@
                       인간과의 접촉을 거의 하지 않으며, 인간 사회 및 <br/>
                       감정에 대해 잘 모른다. 반박자 느린 성격에 항상 <br/>
                       순진무구한 표정을 한다.<br/>
-                      그녀와 이야기를 나눈다면, 그녀의 생각이 다른 사<br/>
-                      람과 조금 다르다는 걸 확인할 수 있다.<br/>
-                      환경의 영향을 받은건지 선천적으로 지능이 부족<br/>
-                      한지는 아직 모른다.
+                      그녀와 이야기를 나눈다면, 그녀의 생각이 다른 사람과 조금 다르다는 걸 확인할 수 있다.<br/>
+                      환경의 영향을 받은건지 선천적으로 지능이 부족한지는 아직 모른다.
                       </p>
                   </div>
                 </div>
@@ -568,11 +555,9 @@
                       말수가 적은 소녀, 하지만 주변 사람이 그녀를 존<br/>
                       경하게끔 만든다.<br/>
                       이런 신비한 느낌은 그녀만의 시간 감지 능력에서 <br/>
-                      비롯되었다. 추상적인 시간이 그녀 눈에서는 「실<br/>
-                      크처럼 화려한 질감」으로 보인다.<br/>
-                      언제부터 이런 능력을 가졌는지는 모르지만, 카발<br/>
-                      라의 선조들이 에리스리나로 시간을 측정해서 영향을<br/>
-                      향을 받은 것으로 보인다.
+                      비롯되었다. 추상적인 시간이 그녀 눈에서는 「실크처럼 화려한 질감」으로 보인다.<br/>
+                      언제부터 이런 능력을 가졌는지는 모르지만, 카발라의 선조들이 에리스리나로 시간을 측정해서 영향을<br/>
+                      받은 것으로 보인다.
                       
                       </p>
                   </div>
@@ -591,10 +576,8 @@
                       꽃말: 변화무쌍<br/>
                       순진하게 생긴 외모는 그녀의 특성과 매우 어울린<br/>
                       다. 귀여운 외모로 많은 인기를 자랑한다.<br/>
-                      수국은 엄청난 호기심으로 장난치는 것을 좋아하<br/>
-                      며 키는 작지만 폭파전문가이다.<br/>
-                      힘든 일이 닥쳐도 웃는 얼굴로 해결하며 약한면을<br/>
-                      드러내지 않는다.
+                      수국은 엄청난 호기심으로 장난치는 것을 좋아하며 키는 작지만 폭파전문가이다.<br/>
+                      힘든 일이 닥쳐도 웃는 얼굴로 해결하며<br/>약한면을 드러내지 않는다.
                       </p>
                   </div>
                 </div>
@@ -610,8 +593,7 @@
                   <div class="scroll">
                     <h4><span>메리골드</span></h4>
                     <p>꽃말: 매서운 겨울<br/>
-                      겨울날 첫눈이 내린 후 피는 꽃. 추위에 강해서 눈<br/>
-                      이 와도 꽃을 피울 수 있다.<br/>
+                      겨울날 첫눈이 내린 후 피는 꽃. 추위에 강해서 눈이 와도 꽃을 피울 수 있다.<br/>
                       바람에 흩날리는 눈꽃과 같이 생겼다
                       </p>
                   </div>
@@ -629,14 +611,12 @@
                     <h4><span>프림로즈</span></h4>
                     <p>꽃말: 가둘 수 없는 마음<br/>
                       하늘 멀리 떠다니는 구름처럼.<br/>
-                      프림로즈는 상냥하고 사려 깊은 마음을 가졌지만, <br/>
-                      망설이는 성격에 많은 기회를 놓쳤다. 이제 그녀는  <br/>
+                      프림로즈는 상냥하고 사려 깊은 마음을 가졌지만<br/>
+                      망설이는 성격에 많은 기회를 놓쳤다. 이제 그녀는<br/>
                       목표를 향해 나아가려는 마음조차 접었다.<br/>
                       [어차피 결과를 장담할 수 없잖아.]<br/>
-                      [상자를 열지 않으면, 상자에 있는 것에 상처받지 <br/>
-                      않을 거야.]<br/>
-                      그녀가 정말 좋아하는 사람을 만났다고 해도, 그<br/>
-                      녀는 망설이다가 결국 침묵을 선택할 것이다.
+                      [상자를 열지 않으면, 상자에 있는 것에 상처받지 않을 거야.]<br/>
+                      그녀가 정말 좋아하는 사람을 만났다고 해도, 그녀는 망설이다가 결국 침묵을 선택할 것이다.
                       </p>
                   </div>
                 </div>
@@ -646,10 +626,10 @@
         </div>
       </div> 
       <!--part9_videomain-->
-      <div class="part slide9"  data-hash="slide09">
+      <div class="part slide9"   id="pro9">
         <div class="main_show">
-              <div class="part9_video_title  ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.35s"><img src="images/part9_title.png"></div>
-              <div  class="item ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.45s">
+              <div class="part9_video_title  " swiper-mate-effect="fadeInRight" swiper-mate-duration="0.5s" swiper-mate-delay="0.35s"><img src="images/part9_title.png"></div>
+              <div  class="item "  swiper-mate-effect="fadeInLeft" swiper-mate-duration="0.5s" swiper-mate-delay="0.45s">
                   <ul >  
                     <li><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part9_video_01.png"></a></li>
                     <li><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part9_video_02.png"></a></li>
@@ -663,7 +643,7 @@
                     <li><a class="videoBtn  video1" href="https://www.youtube.com/embed/UikZrl0WbdA/?autoplay=1&loop=1;controls=0&amp;showinfo=0&fmt=22" ><img src="images/part9_video_03.png"></a></li>            
                   </ul>
               </div>
-              <div class="footer_links ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.55s">
+              <div class="footer_links " swiper-mate-effect="fadeInDown" swiper-mate-duration="0.5s" swiper-mate-delay="0.55s">
                     <div class="footer_link">
                     <a href="https://lonkr.arkgames.com/User_Agreement.html" target="_blank"><img src="images/footer_03.png"></a>
                     <a  href="https://lonkr.arkgames.com/Privacy_Policy.html" target="_blank"><img src="images/footer_04.png"><img src="images/footer_05.png"><img src="images/footer_06.png">
@@ -677,12 +657,65 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
-  <script src="js/swiper.animate1.0.3.min.js"></script>
   <script src="js/qiehuan.js"></script>
   <script src="js/input.js"></script>
+  <script src="js/wow.js"></script>
   <script src="js/jquery.colorbox.js"></script>
   <script>
+    $(function(){
 
+      $('.part1_btn,.part3_regitster').click(function(){
+     
+        document.querySelector("#pro2").scrollIntoView();
+
+  $('.nav_box').removeClass('active');
+  $(this).addClass('active').siblings('div').removeClass('active');
+});
+$('.link_part1').click(function(){
+    document.querySelector("#pro1").scrollIntoView();
+    $('.sidebar_box').removeClass('active')
+});
+$('.link_part2').click(function(){
+    document.querySelector("#pro2").scrollIntoView();
+    $('.sidebar_box').removeClass('active')
+});
+
+$('.link_part3').click(function(){
+    document.querySelector("#pro3").scrollIntoView();
+    $('.sidebar_box').removeClass('active')
+});
+
+$('.link_part4').click(function(){
+    document.querySelector("#pro4").scrollIntoView();
+    $('.sidebar_box').removeClass('active')
+});
+
+$('.link_part5').click(function(){
+  document.querySelector("#pro5").scrollIntoView();
+    $('.sidebar_box').removeClass('active')
+});
+
+$('.link_part6').click(function(){
+  document.querySelector("#pro6").scrollIntoView();
+    $('.sidebar_box').removeClass('active')
+});
+
+$('.link_part7').click(function(){
+  document.querySelector("#pro7").scrollIntoView();
+    $('.sidebar_box').removeClass('active')
+});
+
+$('.link_part8').click(function(){
+  document.querySelector("#pro8").scrollIntoView();
+    $('.sidebar_box').removeClass('active')
+});
+
+$('.link_part9').click(function(){
+  document.querySelector("#pro9").scrollIntoView();
+    $('.sidebar_box').removeClass('active')
+});
+
+    })
 
 
 //角色弹窗	

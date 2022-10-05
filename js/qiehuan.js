@@ -113,54 +113,7 @@ $('.tc_main_big .closed').click(function(){
 
 
      
-$('.part1_btn,.part3_regitster').click(function(){
-  jQuery('html,body').animate({scrollTop:$('.slide2').offset().top}, 1000);
-  $('.nav_box').removeClass('active');
-  $(this).addClass('active').siblings('div').removeClass('active');
-});
-$('.link_part1').click(function(){
-  jQuery('html,body').animate({scrollTop:$('.slide1').offset().top}, 1000);
-    $('.sidebar_box').removeClass('active')
-});
-$('.link_part2').click(function(){
-  jQuery('html,body').animate({scrollTop:$('.slide2').offset().top}, 1000);
-    $('.sidebar_box').removeClass('active')
-});
 
-$('.link_part3').click(function(){
-  jQuery('html,body').animate({scrollTop:$('.slide3').offset().top}, 1000);
-    $('.sidebar_box').removeClass('active')
-});
-
-$('.link_part4').click(function(){
-  jQuery('html,body').animate({scrollTop:$('.slide4').offset().top}, 1000);
-    $('.sidebar_box').removeClass('active')
-});
-
-$('.link_part5').click(function(){
-  jQuery('html,body').animate({scrollTop:$('.slide5').offset().top}, 1000);
-    $('.sidebar_box').removeClass('active')
-});
-
-$('.link_part6').click(function(){
-  jQuery('html,body').animate({scrollTop:$('.slide6').offset().top}, 1000);
-    $('.sidebar_box').removeClass('active')
-});
-
-$('.link_part7').click(function(){
-  jQuery('html,body').animate({scrollTop:$('.slide7').offset().top}, 1000);
-    $('.sidebar_box').removeClass('active')
-});
-
-$('.link_part8').click(function(){
-  jQuery('html,body').animate({scrollTop:$('.slide8').offset().top}, 1000);
-    $('.sidebar_box').removeClass('active')
-});
-
-$('.link_part9').click(function(){
-  jQuery('html,body').animate({scrollTop:$('.slide9').offset().top}, 1000);
-    $('.sidebar_box').removeClass('active')
-});
  /*弹窗框关闭按钮*/
 $('.tc_msg_bg_wrap .closed').click(function(){
   $('.tc_msg_bg_wrap').css('display','none');
@@ -174,7 +127,7 @@ $('.tc_success_big .closed').click(function(){
 
  /*part8--花灵*/ 
 var flowerswiper = new Swiper('.part8_swiper',{
-    loop:true, initialSlide: 6,
+    loop:true, initialSlide: 7,
     slideToClickedSlide: true,
     slidesPerView: 4,
     freeMode: true,watchSlidesProgress: true,
