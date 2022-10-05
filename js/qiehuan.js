@@ -111,170 +111,137 @@ $('.tc_main_big .closed').click(function(){
   $('.masked').css('display','none');
 })
 
-// var Mainswiper = new Swiper('.swiper-fullscreen', {
-//   direction: 'vertical',
-//     mousewheel: true,
-//     pagination: {
-//       el: '.swiper-pagination .pages',
-//       clickable: true,
-//       renderBullet: function (index, className) {
-//         return '<span class="' + className + '">0' + (index + 1) + '</span>';
-//       },
-//     },
-//     on: {
-//       init: function () {
-//         swiperAnimateCache(this); //隐藏动画元素 
-//         swiperAnimate(this); //初始化完成开始动画
-//       },
-//       slideChangeTransitionEnd: function () {
-//         swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+
      
-//       },
-//     },
-// });
-/*侧边栏链接对应屏幕*/
 $('.part1_btn,.part3_regitster').click(function(){
-Mainswiper.slideTo(1);
-$('.nav_box').removeClass('active');
-$(this).addClass('active').siblings('div').removeClass('active');
+  jQuery('html,body').animate({scrollTop:$('.slide2').offset().top}, 1000);
+  $('.nav_box').removeClass('active');
+  $(this).addClass('active').siblings('div').removeClass('active');
 });
 $('.link_part1').click(function(){
-Mainswiper.slideTo(0);
-  $('.sidebar_box').removeClass('active')
+  jQuery('html,body').animate({scrollTop:$('.slide1').offset().top}, 1000);
+    $('.sidebar_box').removeClass('active')
 });
 $('.link_part2').click(function(){
-Mainswiper.slideTo(1);
-  $('.sidebar_box').removeClass('active')
+  jQuery('html,body').animate({scrollTop:$('.slide2').offset().top}, 1000);
+    $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part3').click(function(){
-Mainswiper.slideTo(2);
-  $('.sidebar_box').removeClass('active')
+  jQuery('html,body').animate({scrollTop:$('.slide3').offset().top}, 1000);
+    $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part4').click(function(){
-Mainswiper.slideTo(3);
-  $('.sidebar_box').removeClass('active')
+  jQuery('html,body').animate({scrollTop:$('.slide4').offset().top}, 1000);
+    $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part5').click(function(){
-Mainswiper.slideTo(4);
-  $('.sidebar_box').removeClass('active')
+  jQuery('html,body').animate({scrollTop:$('.slide5').offset().top}, 1000);
+    $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part6').click(function(){
-Mainswiper.slideTo(5);
-  $('.sidebar_box').removeClass('active')
+  jQuery('html,body').animate({scrollTop:$('.slide6').offset().top}, 1000);
+    $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part7').click(function(){
-Mainswiper.slideTo(6);
-  $('.sidebar_box').removeClass('active')
+  jQuery('html,body').animate({scrollTop:$('.slide7').offset().top}, 1000);
+    $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part8').click(function(){
-Mainswiper.slideTo(7);
-  $('.sidebar_box').removeClass('active')
+  jQuery('html,body').animate({scrollTop:$('.slide8').offset().top}, 1000);
+    $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part9').click(function(){
-Mainswiper.slideTo(8);
-  $('.sidebar_box').removeClass('active')
+  jQuery('html,body').animate({scrollTop:$('.slide9').offset().top}, 1000);
+    $('.sidebar_box').removeClass('active')
 });
-/*弹窗框关闭按钮*/
+ /*弹窗框关闭按钮*/
 $('.tc_msg_bg_wrap .closed').click(function(){
-$('.tc_msg_bg_wrap').css('display','none');
+  $('.tc_msg_bg_wrap').css('display','none');
 })
 $('.tc_text_tip_wrap .closed').click(function(){
-$('.tc_text_tip_wrap').css('display','none');
+  $('.tc_text_tip_wrap').css('display','none');
 })
 $('.tc_success_big .closed').click(function(){
-$('.tc_success_big').css('display','none');
+  $('.tc_success_big').css('display','none');
 })
 
-/*part8--花灵*/ 
+ /*part8--花灵*/ 
 var flowerswiper = new Swiper('.part8_swiper',{
-  loop:true, initialSlide: 6,
-  slideToClickedSlide: true,
-  slidesPerView: 4,
-  freeMode: true,watchSlidesProgress: true,
-  navigation: {
-    nextEl: '.part8_menu  .swiper-button-next',
-    prevEl: '.part8_menu .swiper-button-prev',
+    loop:true, initialSlide: 6,
+    slideToClickedSlide: true,
+    slidesPerView: 4,
+    freeMode: true,watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.part8_menu  .swiper-button-next',
+      prevEl: '.part8_menu .swiper-button-prev',
 },
 on: {
-resize: function () {
-        setTimeout(function(){
-          flowerswiper.update()
-        },500)
-        
-  },
-slideChangeTransitionEnd:function(flowerswiper){ 
-      var index = this.realIndex;
-        //role.slideTo(swiper1.realIndex);
-      $('.role .content_tro dd').eq(index).fadeIn().siblings().hide();
-        var dd = $('.role .content_tro dd').eq(index);
-      //  console.log(dd.length)
-          $('.role .content_tro dd').hide()
-          dd.show();
-        //  dd.find('.role_name').addClass('animated fadeInDown');
-        //  dd.find('.role_people').addClass('animated fadeInUp');
-        //  dd.find('.note').addClass('animated fadeInRight');
-      },
+  resize: function () {
+          setTimeout(function(){
+            flowerswiper.update()
+          },500)
+          
     },
+  slideChangeTransitionEnd:function(flowerswiper){ 
+        var index = this.realIndex;
+          //role.slideTo(swiper1.realIndex);
+        $('.role .content_tro dd').eq(index).fadeIn().siblings().hide();
+          var dd = $('.role .content_tro dd').eq(index);
+        //  console.log(dd.length)
+            $('.role .content_tro dd').hide()
+            dd.show();
+          //  dd.find('.role_name').addClass('animated fadeInDown');
+          //  dd.find('.role_people').addClass('animated fadeInUp');
+          //  dd.find('.note').addClass('animated fadeInRight');
+        },
+      },
 });
-//文字滚动时，禁止全屏滚动
-$(function () {
-  $('.scroll').hover(function () {
-    Mainswiper.mousewheel.disable();
-  }, function () {
-    Mainswiper.mousewheel.enable();
-  })
-}) 
+
 // 视频特色
 var swiper = new Swiper('.page5_swiper', {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  pagination: {
-  el: '.swiper-pagination',
-  clickable: true,
-  },
-  loop : true,
-  initialSlide :0,
-  navigation: {
-      nextEl: '.page5_swiper .swiper-button-next',
-      prevEl: '.page5_swiper .swiper-button-prev',
-      },
-  nextEl: '.page5_swiper .swiper-button-next',
-  prevEl: '.page5_swiper .swiper-button-prev',
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    },
+    loop : true,
+    initialSlide :0,
+    navigation: {
+        nextEl: '.page5_swiper .swiper-button-next',
+        prevEl: '.page5_swiper .swiper-button-prev',
+        },
+    nextEl: '.page5_swiper .swiper-button-next',
+    prevEl: '.page5_swiper .swiper-button-prev',
 });
 // 角色特色
 var swiper = new Swiper('.page7_swiper', {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  pagination: {
-  el: '.swiper-pagination',
-  clickable: true,
-  },
-  loop : true,
-  initialSlide :0,
-  navigation: {
-      nextEl: '.page7_swiper .swiper-button-next',
-      prevEl: '.page7_swiper .swiper-button-prev',
-      },
-  nextEl: '.page7_swiper .swiper-button-next',
-  prevEl: '.page7_swiper .swiper-button-prev',
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    },
+    loop : true,
+    initialSlide :0,
+    navigation: {
+        nextEl: '.page7_swiper .swiper-button-next',
+        prevEl: '.page7_swiper .swiper-button-prev',
+        },
+    nextEl: '.page7_swiper .swiper-button-next',
+    prevEl: '.page7_swiper .swiper-button-prev',
 });
 
-//视频弹窗
-$(function(){
-  $(".video1").colorbox({iframe:true, innerWidth:"80%", innerHeight:"30%"});	
 })
-
-})
-
 
