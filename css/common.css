@@ -62,7 +62,7 @@ html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%; }/*Ã
  .slide7{background-image:url(../images/phone_part07.jpg)}
  .slide8{background-image:url(../images/phone_part08.jpg)}
  .slide9{background-image:url(../images/phone_part09.jpg)}
-.main_show{width:7.5rem;position:relative;height:100%;}
+.main_show{width:7.5rem;position:relative;height:100%;border:2px solid #f00;}
 
 .common_menu{position:absolute;top:0.38rem;right:0.02rem;width:1.2rem;height:1.2rem;z-index:10;}
 .common_menu img{width:0.54rem;height:0.57rem;}
@@ -87,7 +87,7 @@ src: url('../font/NEXEN\ TIRE_Regular.ttf'),
 
 .nav_btn{position:absolute;top:1.04rem;width:4.73rem;margin:0 auto;right:0rem;-webkit-animation-duration:1.0s;animation-duration:1.0s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:fadeInUp;animation-name:fadeInUp}
 .nav_btn div.active a{color:#fde23b}
-.nav_btn div a{color:#fff;font-size:0.42rem;font-family: myFirstFont;font-weight: bold;}
+.nav_btn div a{color:#fff;font-size:0.42rem;font-family: myFirstFont;}
 .nav_line{width:100%;height:0.01rem;background:#31343c}
 .nav_link .link{height:1.1rem;border-top:0.01rem solid #616b6f;background:rgb(0,0,0,0.8);line-height:1rem;cursor:pointer;font-size:0.4rem;text-align:center;width:100%;}
 .list_logo{display:flex;flex-flow:column nowrap;justify-content:space-between;align-items:center;position:absolute;top:0rem;left:0rem;text-align:center;z-index:88;-webkit-transition:all 1s ease-in-out;transition:all 1s ease-in-out;border-top:0.01rem solid #515256}
@@ -154,7 +154,7 @@ animation: magnify .6s linear infinite alternate;
 
 /*part2*/
 .register_left_top{position:absolute;top:0.9rem;left:0;width:7.5rem;display: flex; justify-content: center; text-align:center;flex-direction: column;height:2rem;}
- .part2_register_text{font-size:0.26rem ; color:#471d18;font-family:myFirstFont;width:7.5rem;text-align: center;margin-bottom: 0.2rem;margin-bottom: 0.1rem;font-weight: bold;;display: flex; justify-content: center;}
+ .part2_register_text{font-size:0.26rem ; color:#471d18;font-family:myFirstFont;width:7.5rem;text-align: center;margin-bottom: 0.2rem;margin-bottom: 0.1rem;display: flex; justify-content: center;}
  .register_left_bottom{width:6.6rem;position:relative;left:0.4rem;bottom:0rem;}
  .part2_register_slogen img{width:7.5rem;height:1.51rem}
  .re_btn img{width:6.59rem;height:0.87rem}
@@ -361,7 +361,7 @@ p.first_text{margin-bottom: 0.2rem;}
 /*tc_textsmall*/
 .tc_text_tip_wrap{width: 7.5rem; height:4.71rem;position: fixed;color:#fff;top:50%;left:50%;transform:translate(-50%,-50%);z-index:120; transition: all 0.3s; display: none;}
 .tc_text_tip_bg{width: 7.5rem;z-index:1; height:6.64rem;background:url(../images/role_masked_bg.png)  no-repeat;background-size:100% 100%; position: relative;}
-.text_wrap{font-size:0.3rem; font-family: myFirstFont;color:#63626d;font-weight: bold;text-align: center;
+.text_wrap{font-size:0.3rem; font-family: myFirstFont;color:#63626d;text-align: center;
 width:100%;height:92%; display: flex; align-items: center; justify-content: center; flex-direction: column;}
 
 .closed img{transition: all 0.3s;width: 0.47rem; height: 0.47rem;}
@@ -374,7 +374,7 @@ width:100%;height:92%; display: flex; align-items: center; justify-content: cent
 
 
 
-    .ios_wrap{font-size:0.28rem;font-family:myFirstFont;color:#63626d;font-weight: bold;text-align: center;
+    .ios_wrap{font-size:0.28rem;font-family:myFirstFont;color:#63626d;text-align: center;
       width:100%;height:100%; display: flex; align-items: center; justify-content: center; flex-direction: column;}
 
       .ios_wrap h4{margin-bottom: 0.3rem;font-weight: bold;}
