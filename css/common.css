@@ -38,8 +38,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 ::-webkit-scrollbar-thumb{background:#fff;height:20%;border-radius:10px;}
 
 
-
- a:hover{color:#f0f;}
+a:hover{color:#333;} */
 body{position:relative;-webkit-text-size-adjust:none;color:#fff;font-size:24px;}
 html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%; overflow-x: hidden;}/*åŽ»é™¤appleè®¾å¤‡ç‚¹å‡»åº•è‰²*/
 .hand{cursor:pointer;transition:all .6s;}
@@ -62,7 +61,7 @@ html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%; over
  .slide7{background-image:url(../images/phone_part07.jpg)}
  .slide8{background-image:url(../images/phone_part08.jpg)}
  .slide9{background-image:url(../images/phone_part09.jpg)}
-.main_show{width:7.5rem;position:relative;height:100%;border:2px solid #f00;}
+.main_show{width:7.5rem;position:relative;height:100%;border:2px solid #fde23b;}
 
 .common_menu{position:absolute;top:0.38rem;right:0.02rem;width:1.2rem;height:1.2rem;z-index:10;}
 .common_menu img{width:0.54rem;height:0.57rem;}
@@ -257,7 +256,7 @@ input[type="checkbox"]:checked{background:url(../images/part2_checked.png) no-re
 
 
 /*part7*/
-.part7_top{color:#062e22;font-weight: bold;font-size: 0.24rem; font-family:myFirstFont; text-align: center; position: absolute;top:0.9rem;}
+.part7_top{color:#062e22;font-size: 0.24rem; font-family:myFirstFont; text-align: center; position: absolute;top:0.9rem;}
 .page7_swiper{width:7.5rem;position:absolute;top:4rem;left:0rem}
 .page7_swiper .swiper-slide{background-position:center;background-size:cover;width:4.37rem;height:8.59rem;margin:0.3rem 0}
 .page7_swiper .swiper-slide img{width:4.37rem;height:8.59rem}
@@ -275,7 +274,7 @@ p.first_text{margin-bottom: 0.2rem;}
 /*par8*/
 .part8_solgen{z-index:10;width: 7.5rem; margin:0 auto; display: flex; justify-content:center; }
 .part8_solgen img{width:7.5rem;height:2.71rem;}
-.part8_top{color:#062e22;font-weight: bold;font-size: 0.24rem; font-family:myFirstFont; text-align: center; position: absolute;top:0.2rem; z-index: 10;}
+.part8_top{color:#062e22;font-size: 0.24rem; font-family:myFirstFont; text-align: center; position: absolute;top:0.2rem; z-index: 10;}
 
 .role{width:7.5rem;margin:0 auto;z-index:6;height:100%}
 .role dl{width:100%;height:100%}
