@@ -207,9 +207,10 @@
 <!--menu--> 
   <div class="common_menu"><img src="images/part1_menu.png"></div>
   <!--主体内容--> 
-  
+  <div class="swiper-container swiper-fullscreen">
+    <div class="swiper-wrapper">
         <!--part1-->
-      <div class="part slide1" data-hash="slide01">
+      <div class="swiper-slide slide1" data-hash="slide01">
         <div class="main_show">
           <video x5-video-player-type="h5-page" x5-playsinline="true" webkit-playsinline playsinline muted autoplay loop class="bgvideo video bg-video">
             <source src="media/main.mp4" type="video/mp4">
@@ -228,7 +229,7 @@
  
       </div>
         <!--part2-->
-      <div class="part slide2" data-hash="slide02">
+      <div class="swiper-slide slide2" data-hash="slide02">
         <div class="main_show">
           <div class="part2_register_slogen"><img src="images/part2_regitster_solgen.png"></div>
             <div class="register_left_bottom">
@@ -270,7 +271,7 @@
         </div>
       </div>
         <!--part3-->
-      <div class="part slide3" data-hash="slide03">
+      <div class="swiper-slide slide3" data-hash="slide03">
         <div class="main_show">
           <div class="part3_top">
             <div class="part3_slogen ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="images/part3_sologen.png"></div>
@@ -296,7 +297,7 @@
       </div>  
      </div>
        <!--part4-->
-      <div class="part slide4">
+      <div class="swiper-slide slide4">
         <div class="main_show">
           <div class="part4_hd_solgen" ><img src="images/part4_hd_solgen.png"></div>
           <div class="part4_bottom">
@@ -308,7 +309,7 @@
       </div>  
       </div>
         <!--part5-->
-      <div class="part slide5" data-hash="slide05">  
+      <div class="swiper-slide slide5" data-hash="slide05">  
         <div class="main_show">
        
           <div class="part5_video_slogen ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"><img src="images/part5_video_title.png"></div>
@@ -345,7 +346,7 @@
               </div>
       </div> 
         <!--part6-->    
-      <div class="part slide6 " data-hash="slide06"  > 
+      <div class="swiper-slide slide6 " data-hash="slide06"  > 
         <div class="main_show">
             <div class="part6_introduction_title ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.25s"><img src="images/part6_introduction_title.png"></div>
             <div  class="part_introduction_text ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.25s">
@@ -356,7 +357,7 @@
         </div>  
       </div>
       <!--part7 role_masked-->
-      <div class="part slide7" data-hash="slide07" >
+      <div class="swiper-slide slide7" data-hash="slide07" >
         <div class="main_show">
           <video x5-video-player-type="h5-page" x5-playsinline="true" webkit-playsinline playsinline muted autoplay loop class="bg-video video">
             <source src="media/part6_video.mp4" type="video/mp4">
@@ -396,7 +397,7 @@
         </div>
       </div>
         <!--part8_role_Character-->
-      <div class="part slide8" data-hash="slide08" > 
+      <div class="swiper-slide slide8" data-hash="slide08" > 
           <div class="main_show">
             <div class="part8_top">
               <div class="part8_solgen"><img src="images/part8_solgen.png"></div> 
@@ -652,7 +653,7 @@
         </div>
       </div> 
       <!--part9_videomain-->
-      <div class="part slide9"  data-hash="slide09">
+      <div class="swiper-slide slide9"  data-hash="slide09">
         <div class="main_show">
               <div class="part9_video_title  ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.35s"><img src="images/part9_title.png"></div>
               <div  class="item ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.45s">
@@ -680,7 +681,8 @@
               </div>
         </div>
       </div>
-
+    </div>
+  </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/swiper.animate1.0.3.min.js"></script>

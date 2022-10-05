@@ -41,7 +41,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 
  a:hover{color:#f00;}
 body{position:relative;-webkit-text-size-adjust:none;color:#fff;font-size:24px;}
-html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%; }/*åŽ»é™¤appleè®¾å¤‡ç‚¹å‡»åº•è‰²*/
+html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%;overflow-x: hidden; }/*åŽ»é™¤appleè®¾å¤‡ç‚¹å‡»åº•è‰²*/
 .hand{cursor:pointer;transition:all .6s;}
 .part1_logo{position: absolute; top:1rem;}
 .part1_solgen{position: absolute; top:5rem;}
@@ -51,18 +51,18 @@ html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%; }/*�
 
 
 .role .content dd .role_name,.note h3,.note h4 span,.part5_title h3 span,.role_info h2{font-family:'Times New Roman',Times,serif}
-/* .swiper-fullscreen{width:100%;height:100%}
-.swiper-fullscreen >.swiper-wrapper>.swiper-slide{width:100%;height:100%;background-repeat:no-repeat;background-position:center center;background-size:cover;position:relative} */
-.slide1{background-image:url(../images/phone_part01.jpg);width:7.5rem;height: 13.34rem;background-position:center center;background-size:cover;position:relative}
-.slide2{background-image:url(../images/phone_part02.jpg);width:7.5rem;height: 13.34rem;background-position:center center;background-size:cover;position:relative}
- .slide3{background-image:url(../images/phone_part03.jpg);width:7.5rem;height: 13.34rem;background-position:center center;background-size:cover;position:relative}
- .slide4{background-image:url(../images/phone_part04.jpg);width:7.5rem;height: 13.34rem;background-position:center center;background-size:cover;position:relative}
- .slide5{background-image:url(../images/phone_part05.jpg);width:7.5rem;height: 13.34rem;background-position:center center;background-size:cover;position:relative}
-.slide6{background-image:url(../images/phone_part06.jpg);width:7.5rem;height: 13.34rem;background-position:center center;background-size:cover;position:relative}
- .slide7{background-image:url(../images/phone_part07.jpg);width:7.5rem;height: 13.34rem;background-position:center center;background-size:cover;position:relative}
-.slide8{background-image:url(../images/phone_part08.jpg);width:7.5rem;height: 13.34rem;background-position:center center;background-size:cover;position:relative}
-.slide9{background-image:url(../images/phone_part09.jpg);width:7.5rem;height: 13.34rem;background-position:center center;background-size:cover;position:relative}
-.main_show{width:7.5rem;position:relative;height:13.34rem;border:3px solid #000;}
+.swiper-fullscreen{width:100%;height:100%}
+.swiper-fullscreen >.swiper-wrapper>.swiper-slide{width:100%;height:100%;background-repeat:no-repeat;background-position:center center;background-size:cover;position:relative;min-height: 100%;}
+.swiper-fullscreen .slide1{background-image:url(../images/phone_part01.jpg)}
+.swiper-fullscreen .slide2{background-image:url(../images/phone_part02.jpg)}
+.swiper-fullscreen .slide3{background-image:url(../images/phone_part03.jpg)}
+.swiper-fullscreen .slide4{background-image:url(../images/phone_part04.jpg)}
+.swiper-fullscreen .slide5{background-image:url(../images/phone_part05.jpg)}
+.swiper-fullscreen .slide6{background-image:url(../images/phone_part06.jpg)}
+.swiper-fullscreen .slide7{background-image:url(../images/phone_part07.jpg)}
+.swiper-fullscreen .slide8{background-image:url(../images/phone_part08.jpg)}
+.swiper-fullscreen .slide9{background-image:url(../images/phone_part09.jpg)}
+.main_show{width:7.5rem;position:relative;height:100%;border:2px solid #f00;}
 
 .common_menu{position:absolute;top:0.38rem;right:0.02rem;width:1.2rem;height:1.2rem;z-index:10;}
 .common_menu img{width:0.54rem;height:0.57rem;}
@@ -87,7 +87,7 @@ src: url('../font/NEXEN\ TIRE_Regular.ttf'),
 
 .nav_btn{position:absolute;top:1.04rem;width:4.73rem;margin:0 auto;right:0rem;-webkit-animation-duration:1.0s;animation-duration:1.0s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:fadeInUp;animation-name:fadeInUp}
 .nav_btn div.active a{color:#fde23b}
-.nav_btn div a{color:#fff;font-size:0.42rem;font-family: myFirstFont;font-weight: bold;}
+.nav_btn div a{color:#fff;font-size:0.42rem;font-family: myFirstFont;}
 .nav_line{width:100%;height:0.01rem;background:#31343c}
 .nav_link .link{height:1.1rem;border-top:0.01rem solid #616b6f;background:rgb(0,0,0,0.8);line-height:1rem;cursor:pointer;font-size:0.4rem;text-align:center;width:100%;}
 .list_logo{display:flex;flex-flow:column nowrap;justify-content:space-between;align-items:center;position:absolute;top:0rem;left:0rem;text-align:center;z-index:88;-webkit-transition:all 1s ease-in-out;transition:all 1s ease-in-out;border-top:0.01rem solid #515256}

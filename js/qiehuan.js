@@ -14,6 +14,28 @@ window.onresize = function(){
 };
 
 
+// $(document).ready(
+//   function () { 
+//        $('.slide2').css({'height':$(window).innerHeight()})
+// }
+// )
+
+$(document).ready(function () { $('body').css({'height':$(window).height()})});
+window.onload = function () {
+  var u = navigator.userAgent;
+  if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+      // 拿到获取焦点的input
+      let input = document.querySelector('input')
+      input.addEventListener('focus', function () {
+          setInterval(function () {
+          // 核心
+              input.scrollIntoView(false);
+          }, 200)
+      })
+  }
+}
+          
+
 $(function () {
   // 音频
   var bgm = new Audio();
