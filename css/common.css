@@ -52,7 +52,7 @@ html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%;overf
 
 .role .content dd .role_name,.note h3,.note h4 span,.part5_title h3 span,.role_info h2{font-family:'Times New Roman',Times,serif}
 /* .swiper-fullscreen{width:100%;height:100%} */
-.part {width:7.5rem;height:13.34rem;background-repeat:no-repeat;background-position:center center;background-size:cover;position:relative;min-height: 100%;}
+.part {width:7.5rem;height:13.34rem;background-repeat:no-repeat;background-position:center center;background-size:cover;position:relative;min-height: 13.34rem;}
 .slide1{background-image:url(../images/phone_part01.jpg)}
 .slide2{background-image:url(../images/phone_part02.jpg)}
 .slide3{background-image:url(../images/phone_part03.jpg)}
@@ -64,11 +64,11 @@ html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%;overf
  .slide9{background-image:url(../images/phone_part09.jpg)}
 .main_show{width:7.5rem;position:relative;height:13.34rem;}
 
-.common_menu{position:absolute;top:0.38rem;right:0.02rem;width:1.2rem;height:1.2rem;z-index:10;}
+.common_menu{position:fixed;top:0.38rem;right:0.02rem;width:1.2rem;height:1.2rem;z-index:10;}
 .common_menu img{width:0.54rem;height:0.57rem;}
 
-.bg-video1{width:100%;height:100vh;display:block;object-fit:cover;position:absolute;top:0;left:0;}
-.bg-video{width:100%;height:100vh;display:block;object-fit:cover;position:absolute;top:0;left:0;}
+.bg-video{width:7.5rem;height:13.34rem;display:block;object-fit:cover;position:absolute;top:0;left:0;}
+/* .bg-video{width:100%;height:100vh;display:block;object-fit:cover;position:absolute;top:0;left:0;} */
 @font-face
 {
 font-family: myFirstFont;
@@ -533,7 +533,7 @@ a.sidebar_subtitle{display:block;color:#999;font-size:0.28rem;margin-top:0.4rem;
 .sidebar_box  .closed img{transition:all 0.3s;width:0.3rem;height:0.3rem}
 .sidebar_box  .closed img:hover{transform:rotate(90deg)}
 
-.bg-video{width:100%;height:100vh;display:block;object-fit:cover;position:absolute;top:0;left:0;}
+/* .bg-video{width:100%;height:100vh;display:block;object-fit:cover;position:absolute;top:0;left:0;} */
 /* .slide1 video{display:block;/* width:750px; *//* height:100vh; *//* object-fit:cover; v}
 .bgvideo{max-width:100%;min-height:100%;object-fit:cover;z-index:3;} */
 
