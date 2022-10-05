@@ -51,18 +51,18 @@ html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%;overf
 
 
 .role .content dd .role_name,.note h3,.note h4 span,.part5_title h3 span,.role_info h2{font-family:'Times New Roman',Times,serif}
-.swiper-fullscreen{width:100%;height:100%}
-.swiper-fullscreen >.swiper-wrapper>.swiper-slide{width:100%;height:100%;background-repeat:no-repeat;background-position:center center;background-size:cover;position:relative;min-height: 100%;}
-.swiper-fullscreen .slide1{background-image:url(../images/phone_part01.jpg)}
-.swiper-fullscreen .slide2{background-image:url(../images/phone_part02.jpg)}
-.swiper-fullscreen .slide3{background-image:url(../images/phone_part03.jpg)}
-.swiper-fullscreen .slide4{background-image:url(../images/phone_part04.jpg)}
-.swiper-fullscreen .slide5{background-image:url(../images/phone_part05.jpg)}
-.swiper-fullscreen .slide6{background-image:url(../images/phone_part06.jpg)}
-.swiper-fullscreen .slide7{background-image:url(../images/phone_part07.jpg)}
-.swiper-fullscreen .slide8{background-image:url(../images/phone_part08.jpg)}
-.swiper-fullscreen .slide9{background-image:url(../images/phone_part09.jpg)}
-.main_show{width:7.5rem;position:relative;height:100%;border:2px solid #f00;}
+/* .swiper-fullscreen{width:100%;height:100%} */
+.part {width:7.5rem;height:13.34rem;background-repeat:no-repeat;background-position:center center;background-size:cover;position:relative;min-height: 100%;}
+.slide1{background-image:url(../images/phone_part01.jpg)}
+.slide2{background-image:url(../images/phone_part02.jpg)}
+.slide3{background-image:url(../images/phone_part03.jpg)}
+.slide4{background-image:url(../images/phone_part04.jpg)}
+ .slide5{background-image:url(../images/phone_part05.jpg)}
+.slide6{background-image:url(../images/phone_part06.jpg)}
+.slide7{background-image:url(../images/phone_part07.jpg)}
+.slide8{background-image:url(../images/phone_part08.jpg)}
+ .slide9{background-image:url(../images/phone_part09.jpg)}
+.main_show{width:7.5rem;position:relative;height:13.34rem;border:2px solid #f00;}
 
 .common_menu{position:absolute;top:0.38rem;right:0.02rem;width:1.2rem;height:1.2rem;z-index:10;}
 .common_menu img{width:0.54rem;height:0.57rem;}
