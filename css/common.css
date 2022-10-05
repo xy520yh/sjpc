@@ -20,7 +20,7 @@ em{font-style:normal;}
 .hidden{display:none;}
 hr{line-height:1;height:1px;background:none;border-top:1px dashed #9F9F9F;border-bottom:1px dashed #fff;}
 img{border:0;margin:0;padding:0;}
-html{min-height:100%;overflow:auto;position:relative;z-index:1;background:#fff;font-family:"å¾®è½¯é›…é»‘";}
+html{min-height:100%;overflow-x:hidden;position:relative;z-index:1;background:#fff;font-family:"å¾®è½¯é›…é»‘";}
 a{text-decoration:none;cursor:pointer;}
 .clearfix:before,.clearfix:after{display:table;content:"";/*ä¸ç”¨æœ‰å†…å®¹ä¹Ÿå¯ä»¥*/}
 .clearfix:after{clear:both;}
@@ -51,17 +51,17 @@ html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%; }/*�
 
 
 .role .content dd .role_name,.note h3,.note h4 span,.part5_title h3 span,.role_info h2{font-family:'Times New Roman',Times,serif}
-.swiper-fullscreen{width:100%;height:100%}
-.swiper-fullscreen  .swiper-slide{width:100%;height:100%;background-repeat:no-repeat;background-position:center center;background-size:cover;position:relative} 
-.swiper-fullscreen .slide1{background-image:url(../images/phone_part01.jpg)}
-.swiper-fullscreen .slide2{background-image:url(../images/phone_part02.jpg)}
-.swiper-fullscreen .slide3{background-image:url(../images/phone_part03.jpg)}
-.swiper-fullscreen .slide4{background-image:url(../images/phone_part04.jpg)}
-.swiper-fullscreen .slide5{background-image:url(../images/phone_part05.jpg)}
-.swiper-fullscreen .slide6{background-image:url(../images/phone_part06.jpg)}
-.swiper-fullscreen .slide7{background-image:url(../images/phone_part07.jpg)}
-.swiper-fullscreen .slide8{background-image:url(../images/phone_part08.jpg)}
-.swiper-fullscreen .slide9{background-image:url(../images/phone_part09.jpg)}
+/* {width:100%;height:100%} */
+.part{width:100%;height:100%;background-repeat:no-repeat;background-position:center center;background-size:cover;position:relative}
+ .slide1{background-image:url(../images/phone_part01.jpg)}
+ .slide2{background-image:url(../images/phone_part02.jpg)}
+ .slide3{background-image:url(../images/phone_part03.jpg)}
+ .slide4{background-image:url(../images/phone_part04.jpg)}
+ .slide5{background-image:url(../images/phone_part05.jpg)}
+ .slide6{background-image:url(../images/phone_part06.jpg)}
+ .slide7{background-image:url(../images/phone_part07.jpg)}
+ .slide8{background-image:url(../images/phone_part08.jpg)}
+ .slide9{background-image:url(../images/phone_part09.jpg)}
 .main_show{width:7.5rem;position:relative;height:100%;}
 
 .common_menu{position:absolute;top:0.38rem;right:0.02rem;width:1.2rem;height:1.2rem;z-index:10;}
@@ -512,7 +512,7 @@ img.hover-shadow{transition:0.3s}
 
 
 /*侧边栏目*/
-.sidebar_box{transition:all 0.3s;position:fixed;right:0;top:0;width:4.5rem;max-width:45%;background:rgba(0,0,0,0.8);height:100%;z-index:111;color:#fff;padding:0.4rem;flex-direction:column;display:flex;justify-content:center;transform:translateX(100%);align-items:center}
+.sidebar_box{transition:all 0.3s;position:fixed;right:0;top:0;width:4.5rem;max-width:45%;background:rgba(0,0,0,0.8);height:100%;z-index:11;color:#fff;padding:0.4rem;flex-direction:column;display:flex;justify-content:center;transform:translateX(100%);align-items:center}
 .sidebar_box.active{transform:translateX(0)}
 .sidebar_main{position:relative;font-family:myFirstFont;width:3rem;display:flex;align-items:center;flex-direction:column;justify-content:center;height:80%;text-align:center}
 .sidebar_main h1{position:relative;text-align:center}

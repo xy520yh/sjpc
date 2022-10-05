@@ -117,46 +117,46 @@ $('.nav_box').removeClass('active');
 $(this).addClass('active').siblings('div').removeClass('active');
 });
 $('.link_part1').click(function(){
-
+Mainswiper.slideTo(0);
   $('.sidebar_box').removeClass('active')
 });
 $('.link_part2').click(function(){
-
+Mainswiper.slideTo(1);
   $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part3').click(function(){
-
+Mainswiper.slideTo(2);
   $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part4').click(function(){
-
+Mainswiper.slideTo(3);
   $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part5').click(function(){
-
+Mainswiper.slideTo(4);
   $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part6').click(function(){
-
+Mainswiper.slideTo(5);
   $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part7').click(function(){
-
+Mainswiper.slideTo(6);
   $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part8').click(function(){
-
+Mainswiper.slideTo(7);
   $('.sidebar_box').removeClass('active')
 });
 
 $('.link_part9').click(function(){
-
+Mainswiper.slideTo(8);
   $('.sidebar_box').removeClass('active')
 });
 /*弹窗框关闭按钮*/
